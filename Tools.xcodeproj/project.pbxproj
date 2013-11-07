@@ -24,6 +24,8 @@
 		0885F49A1733AA1800246C02 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0885F4991733AA1800246C02 /* Default-568h@2x.png */; };
 		0885F4A21733AA3200246C02 /* ADTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0885F4A11733AA3200246C02 /* ADTools.m */; };
 		0885F4A51733AB7300246C02 /* WQPDFManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0885F4A41733AB7300246C02 /* WQPDFManager.m */; };
+		088604E5182B8B3F005E5755 /* HPGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 088604E2182B8B3F005E5755 /* HPGrowingTextView.m */; };
+		088604E6182B8B3F005E5755 /* HPTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 088604E4182B8B3F005E5755 /* HPTextViewInternal.m */; };
 		08A9D7081738D11D00CBE0BA /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A9D7031738D11D00CBE0BA /* TFHpple.m */; };
 		08A9D7091738D11D00CBE0BA /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A9D7051738D11D00CBE0BA /* TFHppleElement.m */; };
 		08A9D70A1738D11D00CBE0BA /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A9D7071738D11D00CBE0BA /* XPathQuery.m */; };
@@ -107,6 +109,10 @@
 		0885F4A11733AA3200246C02 /* ADTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADTools.m; sourceTree = "<group>"; };
 		0885F4A31733AB7300246C02 /* WQPDFManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQPDFManager.h; sourceTree = "<group>"; };
 		0885F4A41733AB7300246C02 /* WQPDFManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQPDFManager.m; sourceTree = "<group>"; };
+		088604E1182B8B3F005E5755 /* HPGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPGrowingTextView.h; sourceTree = "<group>"; };
+		088604E2182B8B3F005E5755 /* HPGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPGrowingTextView.m; sourceTree = "<group>"; };
+		088604E3182B8B3F005E5755 /* HPTextViewInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPTextViewInternal.h; sourceTree = "<group>"; };
+		088604E4182B8B3F005E5755 /* HPTextViewInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPTextViewInternal.m; sourceTree = "<group>"; };
 		08A9D7021738D11D00CBE0BA /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		08A9D7031738D11D00CBE0BA /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		08A9D7041738D11D00CBE0BA /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
@@ -282,6 +288,7 @@
 				08DCA8AA17AA48DD00E3F528 /* UIImage+ImageEffects.m */,
 				08DCA96917AA5A7E00E3F528 /* JScrollView+PageControl+AutoScroll.h */,
 				08DCA96A17AA5A7E00E3F528 /* JScrollView+PageControl+AutoScroll.m */,
+				088604E0182B8B3F005E5755 /* HUITextView */,
 				08054D09179E6F84005F80BA /* 截图 */,
 				08BAC9F71794F4810016CCFD /* ChineseToPinyin */,
 				080A9DF7178AAC1600874A8F /* iVersion */,
@@ -311,6 +318,17 @@
 				0885F4991733AA1800246C02 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		088604E0182B8B3F005E5755 /* HUITextView */ = {
+			isa = PBXGroup;
+			children = (
+				088604E1182B8B3F005E5755 /* HPGrowingTextView.h */,
+				088604E2182B8B3F005E5755 /* HPGrowingTextView.m */,
+				088604E3182B8B3F005E5755 /* HPTextViewInternal.h */,
+				088604E4182B8B3F005E5755 /* HPTextViewInternal.m */,
+			);
+			path = HUITextView;
 			sourceTree = "<group>";
 		};
 		08A9D7011738D11D00CBE0BA /* HTMLParser */ = {
@@ -592,6 +610,7 @@
 				08D3A86B1737B78D00220430 /* Matrix.m in Sources */,
 				08D3A86C1737B78D00220430 /* STScratchView.m in Sources */,
 				08D3A86D1737B78D00220430 /* ViewController.m in Sources */,
+				088604E6182B8B3F005E5755 /* HPTextViewInternal.m in Sources */,
 				08A9D7081738D11D00CBE0BA /* TFHpple.m in Sources */,
 				08A9D7091738D11D00CBE0BA /* TFHppleElement.m in Sources */,
 				08A9D70A1738D11D00CBE0BA /* XPathQuery.m in Sources */,
@@ -602,6 +621,7 @@
 				08B5DBAF17794BE20078A68D /* CustomSwitch.m in Sources */,
 				083C36011786C30400B4E095 /* SCGIFImageView.m in Sources */,
 				080A9DFC178AAC1600874A8F /* iVersion.m in Sources */,
+				088604E5182B8B3F005E5755 /* HPGrowingTextView.m in Sources */,
 				08BAC9FA1794F4810016CCFD /* ChineseToPinyin.m in Sources */,
 				08054D0C179E6F84005F80BA /* BJImageCropper.m in Sources */,
 				08DCA8AB17AA48DD00E3F528 /* UIImage+ImageEffects.m in Sources */,
