@@ -65,6 +65,11 @@
     //移除栈顶的基于当前位图的图形上下文
     UIGraphicsEndImageContext();
     return aImage;
+    //苹果最新接口
+//    CGImageRef UIGetScreenImage();
+//    CGImageRef img = UIGetScreenImage();
+//    UIImage* scImage=[UIImage imageWithCGImage:img];
+//    return scImage;
 }
 /**
  *  @brief  图片上添加文字
