@@ -69,3 +69,15 @@ static CGAffineTransform CGAffineTransformMakeRotationAt(CGFloat angle, CGPoint 
     const CGFloat fsin = sin(angle);
     return CGAffineTransformMake(fcos, fsin, -fsin, fcos, fx - fx * fcos + fy * fsin, fy - fx * fsin - fy * fcos);
 }
+
+/**
+ *  @brief  点击UIViewController的任何地方使键盘消失
+ *
+ *  或者在VC中重写touchbegin方法[self.vew endEditing:YES];
+ */
+#define DisMissKeybord  [[[UIApplication sharedApplication] keyWindow] endEditing:YES]
+
+/**
+ *  @brief  移除view上的所有subviews
+ */
+#define RemoveAllSubviews(view) [[view subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)]
