@@ -200,4 +200,30 @@
         NSLog(@" Error loading image");
     }
 }
+
+/**
+ *  @brief  把汉字转为拼音
+ *
+ *  @param  String   NSString型   转换的字符串
+ *
+ */
+- (NSString*)ChineseToPinyin:(NSString*)String
+{
+    //用到的函数
+    // Boolean CFStringTransform(CFMutableStringRef string, CFRange *range, CFStringRef transform, Boolean reverse);
+    //  string参数是要转换的string,比如要转换的中文，同时它是mutable的，因此也直接作为最终转换后的字符串。
+    //  range是要转换的范围，同时输出转换后改变的范围，如果为NULL，视为全部转换
+    //  transform可以指定要进行什么样的转换，这里可以指定多种语言的拼写转换。
+    //  reverse指定该转换是否必须是可逆向转换的。
+    //  如果转换成功就返回true，否则返回false。
+    
+    //如果要进行汉字到拼音的转换，我们只需要将transform设定为kCFStringTransformMandarinLatin或者kCFStringTransformToLatin（kCFStringTransformToLatin也可适用于非汉字字符串）
+    CFMutableStringRef string = CFStringCreateMutableCopy(NULL, 0, (CFStringRef)String);
+    CFStringTransform(string, NULL, kCFStringTransformMandarinLatin, NO);
+    NSLog(@"== %@",string);
+    //不需要音标
+    CFStringTransform(string, NULL, kCFStringTransformStripDiacritics, NO);
+    NSLog(@"## %@", string);
+    return (NSString*)string;
+}
 @end
