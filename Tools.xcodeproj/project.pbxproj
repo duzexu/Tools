@@ -13,6 +13,7 @@
 		080A9DFB178AAC1600874A8F /* iVersion.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 080A9DF8178AAC1600874A8F /* iVersion.bundle */; };
 		080A9DFC178AAC1600874A8F /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 080A9DFA178AAC1600874A8F /* iVersion.m */; };
 		083C36011786C30400B4E095 /* SCGIFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 083C36001786C30400B4E095 /* SCGIFImageView.m */; };
+		084EBB4D184DD1BA00FAC37B /* MSKeyboardScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 084EBB4C184DD1BA00FAC37B /* MSKeyboardScrollView.m */; };
 		0885F4841733AA1800246C02 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0885F4831733AA1800246C02 /* UIKit.framework */; };
 		0885F4861733AA1800246C02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0885F4851733AA1800246C02 /* Foundation.framework */; };
 		0885F4881733AA1800246C02 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0885F4871733AA1800246C02 /* CoreGraphics.framework */; };
@@ -92,6 +93,8 @@
 		080A9DFA178AAC1600874A8F /* iVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVersion.m; sourceTree = "<group>"; };
 		083C35FF1786C30400B4E095 /* SCGIFImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGIFImageView.h; sourceTree = "<group>"; };
 		083C36001786C30400B4E095 /* SCGIFImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCGIFImageView.m; sourceTree = "<group>"; };
+		084EBB4B184DD1BA00FAC37B /* MSKeyboardScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSKeyboardScrollView.h; sourceTree = "<group>"; };
+		084EBB4C184DD1BA00FAC37B /* MSKeyboardScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSKeyboardScrollView.m; sourceTree = "<group>"; };
 		0885F47F1733AA1800246C02 /* Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0885F4831733AA1800246C02 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0885F4851733AA1800246C02 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -288,6 +291,8 @@
 				08DCA8AA17AA48DD00E3F528 /* UIImage+ImageEffects.m */,
 				08DCA96917AA5A7E00E3F528 /* JScrollView+PageControl+AutoScroll.h */,
 				08DCA96A17AA5A7E00E3F528 /* JScrollView+PageControl+AutoScroll.m */,
+				084EBB4B184DD1BA00FAC37B /* MSKeyboardScrollView.h */,
+				084EBB4C184DD1BA00FAC37B /* MSKeyboardScrollView.m */,
 				088604E0182B8B3F005E5755 /* HUITextView */,
 				08054D09179E6F84005F80BA /* 截图 */,
 				08BAC9F71794F4810016CCFD /* ChineseToPinyin */,
@@ -621,6 +626,7 @@
 				08B5DBAF17794BE20078A68D /* CustomSwitch.m in Sources */,
 				083C36011786C30400B4E095 /* SCGIFImageView.m in Sources */,
 				080A9DFC178AAC1600874A8F /* iVersion.m in Sources */,
+				084EBB4D184DD1BA00FAC37B /* MSKeyboardScrollView.m in Sources */,
 				088604E5182B8B3F005E5755 /* HPGrowingTextView.m in Sources */,
 				08BAC9FA1794F4810016CCFD /* ChineseToPinyin.m in Sources */,
 				08054D0C179E6F84005F80BA /* BJImageCropper.m in Sources */,

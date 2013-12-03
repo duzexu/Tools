@@ -81,3 +81,8 @@ static CGAffineTransform CGAffineTransformMakeRotationAt(CGFloat angle, CGPoint 
  *  @brief  移除view上的所有subviews
  */
 #define RemoveAllSubviews(view) [[view subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)]
+
+/**
+ *  @brief  得到UUID
+ */
+#define GetUUID [[[UIDevice currentDevice] identifierForVendor] UUIDString]
