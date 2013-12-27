@@ -27,6 +27,7 @@
 		0885F4A51733AB7300246C02 /* WQPDFManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0885F4A41733AB7300246C02 /* WQPDFManager.m */; };
 		088604E5182B8B3F005E5755 /* HPGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 088604E2182B8B3F005E5755 /* HPGrowingTextView.m */; };
 		088604E6182B8B3F005E5755 /* HPTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 088604E4182B8B3F005E5755 /* HPTextViewInternal.m */; };
+		089E0608186D7D51009743F7 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 089E0607186D7D51009743F7 /* UIView+Utils.m */; };
 		08A9D7081738D11D00CBE0BA /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A9D7031738D11D00CBE0BA /* TFHpple.m */; };
 		08A9D7091738D11D00CBE0BA /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A9D7051738D11D00CBE0BA /* TFHppleElement.m */; };
 		08A9D70A1738D11D00CBE0BA /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A9D7071738D11D00CBE0BA /* XPathQuery.m */; };
@@ -116,6 +117,8 @@
 		088604E2182B8B3F005E5755 /* HPGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPGrowingTextView.m; sourceTree = "<group>"; };
 		088604E3182B8B3F005E5755 /* HPTextViewInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPTextViewInternal.h; sourceTree = "<group>"; };
 		088604E4182B8B3F005E5755 /* HPTextViewInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPTextViewInternal.m; sourceTree = "<group>"; };
+		089E0606186D7D51009743F7 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
+		089E0607186D7D51009743F7 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 		08A9D7021738D11D00CBE0BA /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		08A9D7031738D11D00CBE0BA /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		08A9D7041738D11D00CBE0BA /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
@@ -279,6 +282,8 @@
 				08ABB35D1749DD5E00DC543E /* Helper.h */,
 				08D3A7B6173758FD00220430 /* UIImage+Auto_fit.h */,
 				08D3A7B7173758FD00220430 /* UIImage+Auto_fit.m */,
+				089E0606186D7D51009743F7 /* UIView+Utils.h */,
+				089E0607186D7D51009743F7 /* UIView+Utils.m */,
 				0885F4A31733AB7300246C02 /* WQPDFManager.h */,
 				0885F4A41733AB7300246C02 /* WQPDFManager.m */,
 				08D3C174174B04CC00406755 /* UIImageView+TapGesture.h */,
@@ -615,6 +620,7 @@
 				08D3A86B1737B78D00220430 /* Matrix.m in Sources */,
 				08D3A86C1737B78D00220430 /* STScratchView.m in Sources */,
 				08D3A86D1737B78D00220430 /* ViewController.m in Sources */,
+				089E0608186D7D51009743F7 /* UIView+Utils.m in Sources */,
 				088604E6182B8B3F005E5755 /* HPTextViewInternal.m in Sources */,
 				08A9D7081738D11D00CBE0BA /* TFHpple.m in Sources */,
 				08A9D7091738D11D00CBE0BA /* TFHppleElement.m in Sources */,
