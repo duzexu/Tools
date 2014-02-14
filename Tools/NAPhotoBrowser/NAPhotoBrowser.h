@@ -2,7 +2,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NAPhoto.h"
-#import "DataBase.h"
+
 
 @class ZoomingScrollView;
 
