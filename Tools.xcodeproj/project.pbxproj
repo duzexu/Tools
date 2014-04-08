@@ -14,6 +14,10 @@
 		080A9DFC178AAC1600874A8F /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 080A9DFA178AAC1600874A8F /* iVersion.m */; };
 		083C36011786C30400B4E095 /* SCGIFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 083C36001786C30400B4E095 /* SCGIFImageView.m */; };
 		084EBB4D184DD1BA00FAC37B /* MSKeyboardScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 084EBB4C184DD1BA00FAC37B /* MSKeyboardScrollView.m */; };
+		0851D36318F3E71A005EA6BD /* NSDate+Exts.m in Sources */ = {isa = PBXBuildFile; fileRef = 0851D36218F3E71A005EA6BD /* NSDate+Exts.m */; };
+		0851D36E18F3E72F005EA6BD /* STDb.m in Sources */ = {isa = PBXBuildFile; fileRef = 0851D36718F3E72F005EA6BD /* STDb.m */; };
+		0851D36F18F3E72F005EA6BD /* STDbHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0851D36918F3E72F005EA6BD /* STDbHandle.m */; };
+		0851D37018F3E72F005EA6BD /* STDbObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0851D36C18F3E72F005EA6BD /* STDbObject.m */; };
 		0885F4841733AA1800246C02 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0885F4831733AA1800246C02 /* UIKit.framework */; };
 		0885F4861733AA1800246C02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0885F4851733AA1800246C02 /* Foundation.framework */; };
 		0885F4881733AA1800246C02 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0885F4871733AA1800246C02 /* CoreGraphics.framework */; };
@@ -48,6 +52,7 @@
 		08A9D7081738D11D00CBE0BA /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A9D7031738D11D00CBE0BA /* TFHpple.m */; };
 		08A9D7091738D11D00CBE0BA /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A9D7051738D11D00CBE0BA /* TFHppleElement.m */; };
 		08A9D70A1738D11D00CBE0BA /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A9D7071738D11D00CBE0BA /* XPathQuery.m */; };
+		08B510EB18BB3EE9003A8F60 /* UITextField+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B510EA18BB3EE9003A8F60 /* UITextField+Shake.m */; };
 		08B5DBAF17794BE20078A68D /* CustomSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B5DBAD17794BE20078A68D /* CustomSwitch.m */; };
 		08B5DBB017794BE20078A68D /* CustomSwitch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08B5DBAE17794BE20078A68D /* CustomSwitch.xib */; };
 		08BAC9FA1794F4810016CCFD /* ChineseToPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 08BAC9F91794F4810016CCFD /* ChineseToPinyin.m */; };
@@ -116,6 +121,16 @@
 		083C36001786C30400B4E095 /* SCGIFImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCGIFImageView.m; sourceTree = "<group>"; };
 		084EBB4B184DD1BA00FAC37B /* MSKeyboardScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSKeyboardScrollView.h; sourceTree = "<group>"; };
 		084EBB4C184DD1BA00FAC37B /* MSKeyboardScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSKeyboardScrollView.m; sourceTree = "<group>"; };
+		0851D36118F3E71A005EA6BD /* NSDate+Exts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Exts.h"; sourceTree = "<group>"; };
+		0851D36218F3E71A005EA6BD /* NSDate+Exts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Exts.m"; sourceTree = "<group>"; };
+		0851D36618F3E72F005EA6BD /* STDb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDb.h; sourceTree = "<group>"; };
+		0851D36718F3E72F005EA6BD /* STDb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDb.m; sourceTree = "<group>"; };
+		0851D36818F3E72F005EA6BD /* STDbHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDbHandle.h; sourceTree = "<group>"; };
+		0851D36918F3E72F005EA6BD /* STDbHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDbHandle.m; sourceTree = "<group>"; };
+		0851D36A18F3E72F005EA6BD /* STDbKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDbKit.h; sourceTree = "<group>"; };
+		0851D36B18F3E72F005EA6BD /* STDbObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDbObject.h; sourceTree = "<group>"; };
+		0851D36C18F3E72F005EA6BD /* STDbObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDbObject.m; sourceTree = "<group>"; };
+		0851D36D18F3E72F005EA6BD /* STDbVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDbVersion.h; sourceTree = "<group>"; };
 		0885F47F1733AA1800246C02 /* Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0885F4831733AA1800246C02 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0885F4851733AA1800246C02 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -181,6 +196,8 @@
 		08A9D7061738D11D00CBE0BA /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		08A9D7071738D11D00CBE0BA /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		08ABB35D1749DD5E00DC543E /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		08B510E918BB3EE9003A8F60 /* UITextField+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Shake.h"; sourceTree = "<group>"; };
+		08B510EA18BB3EE9003A8F60 /* UITextField+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Shake.m"; sourceTree = "<group>"; };
 		08B5DBAC17794BE20078A68D /* CustomSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSwitch.h; sourceTree = "<group>"; };
 		08B5DBAD17794BE20078A68D /* CustomSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSwitch.m; sourceTree = "<group>"; };
 		08B5DBAE17794BE20078A68D /* CustomSwitch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomSwitch.xib; sourceTree = "<group>"; };
@@ -305,6 +322,21 @@
 			path = iVersion;
 			sourceTree = "<group>";
 		};
+		0851D36518F3E72F005EA6BD /* STDB */ = {
+			isa = PBXGroup;
+			children = (
+				0851D36618F3E72F005EA6BD /* STDb.h */,
+				0851D36718F3E72F005EA6BD /* STDb.m */,
+				0851D36818F3E72F005EA6BD /* STDbHandle.h */,
+				0851D36918F3E72F005EA6BD /* STDbHandle.m */,
+				0851D36A18F3E72F005EA6BD /* STDbKit.h */,
+				0851D36B18F3E72F005EA6BD /* STDbObject.h */,
+				0851D36C18F3E72F005EA6BD /* STDbObject.m */,
+				0851D36D18F3E72F005EA6BD /* STDbVersion.h */,
+			);
+			path = STDB;
+			sourceTree = "<group>";
+		};
 		0885F4741733AA1800246C02 = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +399,8 @@
 				08F9F06418AE07E300DF5815 /* XMLReader.m */,
 				08F9F05F18ADD1EE00DF5815 /* NSObject+AutoDescription.h */,
 				08F9F06018ADD1EE00DF5815 /* NSObject+AutoDescription.m */,
+				0851D36518F3E72F005EA6BD /* STDB */,
+				08B510E818BB3EE9003A8F60 /* UITextField-Shake */,
 				0899C2A818ACCA6B003745FE /* NSData+AsyncCacher */,
 				0899C29E18ACB465003745FE /* Toast */,
 				0899C29A18ACB13C003745FE /* NSDate-Escort */,
@@ -519,6 +553,8 @@
 		0899C29A18ACB13C003745FE /* NSDate-Escort */ = {
 			isa = PBXGroup;
 			children = (
+				0851D36118F3E71A005EA6BD /* NSDate+Exts.h */,
+				0851D36218F3E71A005EA6BD /* NSDate+Exts.m */,
 				0899C2AC18ACCA96003745FE /* NSDate+Helper.h */,
 				0899C2AD18ACCA96003745FE /* NSDate+Helper.m */,
 				0899C29B18ACB13C003745FE /* NSDate+Escort.h */,
@@ -558,6 +594,15 @@
 				08A9D7071738D11D00CBE0BA /* XPathQuery.m */,
 			);
 			path = HTMLParser;
+			sourceTree = "<group>";
+		};
+		08B510E818BB3EE9003A8F60 /* UITextField-Shake */ = {
+			isa = PBXGroup;
+			children = (
+				08B510E918BB3EE9003A8F60 /* UITextField+Shake.h */,
+				08B510EA18BB3EE9003A8F60 /* UITextField+Shake.m */,
+			);
+			path = "UITextField-Shake";
 			sourceTree = "<group>";
 		};
 		08B5DBB117794BE90078A68D /* CustomSwitch */ = {
@@ -802,6 +847,7 @@
 				0885F4941733AA1800246C02 /* AppDelegate.m in Sources */,
 				0899C29118ACA2DE003745FE /* NSObject+SFExecuteOnDealloc.m in Sources */,
 				0899C29518ACA520003745FE /* UIView+Recursion.m in Sources */,
+				0851D37018F3E72F005EA6BD /* STDbObject.m in Sources */,
 				0899C29018ACA2DE003745FE /* NSObject+SFObservers.m in Sources */,
 				0899C2A118ACB465003745FE /* Toast+UIView.m in Sources */,
 				0885F4A21733AA3200246C02 /* ADTools.m in Sources */,
@@ -816,8 +862,10 @@
 				08D3A8181737B74E00220430 /* UIViewTap.m in Sources */,
 				08D3A8191737B74E00220430 /* ZoomingScrollView.m in Sources */,
 				08D3A8291737B75800220430 /* ioapi.c in Sources */,
+				0851D36F18F3E72F005EA6BD /* STDbHandle.m in Sources */,
 				08D3A82A1737B75800220430 /* mztools.c in Sources */,
 				0899C28F18ACA2DE003745FE /* NSNotificationCenter+SFObservers.m in Sources */,
+				08B510EB18BB3EE9003A8F60 /* UITextField+Shake.m in Sources */,
 				0899C27918AC9D7E003745FE /* NSInvocation+SimpleCreation.m in Sources */,
 				08D3A82B1737B75800220430 /* unzip.c in Sources */,
 				08D3A82C1737B75800220430 /* zip.c in Sources */,
@@ -855,9 +903,11 @@
 				08B5DBAF17794BE20078A68D /* CustomSwitch.m in Sources */,
 				08F9F06118ADD1EE00DF5815 /* NSObject+AutoDescription.m in Sources */,
 				0899C27D18AC9E1E003745FE /* UILabel+ContentSize.m in Sources */,
+				0851D36318F3E71A005EA6BD /* NSDate+Exts.m in Sources */,
 				083C36011786C30400B4E095 /* SCGIFImageView.m in Sources */,
 				080A9DFC178AAC1600874A8F /* iVersion.m in Sources */,
 				084EBB4D184DD1BA00FAC37B /* MSKeyboardScrollView.m in Sources */,
+				0851D36E18F3E72F005EA6BD /* STDb.m in Sources */,
 				088604E5182B8B3F005E5755 /* HPGrowingTextView.m in Sources */,
 				08BAC9FA1794F4810016CCFD /* ChineseToPinyin.m in Sources */,
 				08054D0C179E6F84005F80BA /* BJImageCropper.m in Sources */,

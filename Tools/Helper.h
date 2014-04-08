@@ -99,4 +99,8 @@ fprintf(stderr, "-------\n");
 #define NSLogSize(size) NSLog(@"%s w:%.4f, h:%.4f", #size, size.width, size.height)
 #define NSLogPoint(point) NSLog(@"%s x:%.4f, y:%.4f", #point, point.x, point.y)
 
-
+/**
+ *  NSString实用方法
+ */
+#define NSStringFromInt(intValue) [NSString stringWithFormat:@"%d",intValue]
+#define NSStringFromFloat(floatValue) [NSString stringWithFormat:@"%f",floatValue]
