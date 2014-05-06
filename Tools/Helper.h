@@ -51,7 +51,9 @@
  *  @return  id类型
  */
 static inline id _release(id obj) {
+#if !( __has_feature(objc_arc))
     if (obj) [obj release], obj = nil;
+#endif
     return obj;
 }
 /**

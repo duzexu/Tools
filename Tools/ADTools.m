@@ -104,6 +104,32 @@
     CGColorSpaceRelease(colorSpace);
     return [UIImage imageWithCGImage:imageMasked];
 }
+
+/**
+ *  把两张图片合成一张
+ *
+ *  @param image1 图片1
+ *  @param image2 图片2
+ *  @param rect1  1的位置
+ *  @param rect2  2的位置
+ *
+ *  @return 合成的图片
+ */
+- (UIImage *)addImage:(UIImage *)image1 withImage:(UIImage *)image2 rect1:(CGRect)rect1 rect2:(CGRect)rect2 {
+    CGSize size = CGSizeMake(rect1.size.width+rect2.size.width, rect1.size.height);
+    
+    UIGraphicsBeginImageContext(size);
+    
+    [image1 drawInRect:rect1];
+    [image2 drawInRect:rect2];
+    
+    UIImage *resultingImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return resultingImage;
+}
+
 /**
  *  @brief  查看网络连接是否可用(引入SystemConfiguration netdb)
  *

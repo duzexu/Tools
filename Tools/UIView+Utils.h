@@ -138,6 +138,10 @@
  */
 - (void)setLongPressActionWithBlock:(void (^)(void))block;
 
+/**
+ * view add shadow
+ */
+- (UIView *)addStanderdShadow;
 @end
 
 
