@@ -35,6 +35,8 @@
 		0885F4A51733AB7300246C02 /* WQPDFManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0885F4A41733AB7300246C02 /* WQPDFManager.m */; };
 		088604E5182B8B3F005E5755 /* HPGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 088604E2182B8B3F005E5755 /* HPGrowingTextView.m */; };
 		088604E6182B8B3F005E5755 /* HPTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = 088604E4182B8B3F005E5755 /* HPTextViewInternal.m */; };
+		0898D9F8192AFD6600AF4F41 /* RadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0898D9F3192AFD6600AF4F41 /* RadioButton.m */; };
+		0898D9FF192B00D200AF4F41 /* CheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 0898D9FE192B00D200AF4F41 /* CheckBox.m */; };
 		0899C26F18AC72B5003745FE /* UIImageView+UIImageView_FaceAwareFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 0899C26E18AC72B5003745FE /* UIImageView+UIImageView_FaceAwareFill.m */; };
 		0899C27418AC98CD003745FE /* AutoCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 0899C27318AC98CD003745FE /* AutoCoding.m */; };
 		0899C27918AC9D7E003745FE /* NSInvocation+SimpleCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0899C27818AC9D7E003745FE /* NSInvocation+SimpleCreation.m */; };
@@ -161,6 +163,10 @@
 		088604E2182B8B3F005E5755 /* HPGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPGrowingTextView.m; sourceTree = "<group>"; };
 		088604E3182B8B3F005E5755 /* HPTextViewInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPTextViewInternal.h; sourceTree = "<group>"; };
 		088604E4182B8B3F005E5755 /* HPTextViewInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPTextViewInternal.m; sourceTree = "<group>"; };
+		0898D9F2192AFD6600AF4F41 /* RadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioButton.h; sourceTree = "<group>"; };
+		0898D9F3192AFD6600AF4F41 /* RadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioButton.m; sourceTree = "<group>"; };
+		0898D9FD192B00D200AF4F41 /* CheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckBox.h; sourceTree = "<group>"; };
+		0898D9FE192B00D200AF4F41 /* CheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckBox.m; sourceTree = "<group>"; };
 		0899C26D18AC72B5003745FE /* UIImageView+UIImageView_FaceAwareFill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+UIImageView_FaceAwareFill.h"; sourceTree = "<group>"; };
 		0899C26E18AC72B5003745FE /* UIImageView+UIImageView_FaceAwareFill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+UIImageView_FaceAwareFill.m"; sourceTree = "<group>"; };
 		0899C27218AC98CD003745FE /* AutoCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoCoding.h; sourceTree = "<group>"; };
@@ -422,6 +428,8 @@
 				0899C2A518ACC958003745FE /* UIImage+Tint.m */,
 				08F9F06318AE07E300DF5815 /* XMLReader.h */,
 				08F9F06418AE07E300DF5815 /* XMLReader.m */,
+				0898D9FC192B00D200AF4F41 /* Checkbox */,
+				0898D9ED192AFD6600AF4F41 /* RadioButton */,
 				0803A6E519011BE9000623AA /* NSObject+AutoDescription */,
 				0803A6BB1900EE46000623AA /* ASValueTrackingSlider */,
 				0851D36518F3E72F005EA6BD /* STDB */,
@@ -478,6 +486,24 @@
 				088604E4182B8B3F005E5755 /* HPTextViewInternal.m */,
 			);
 			path = HUITextView;
+			sourceTree = "<group>";
+		};
+		0898D9ED192AFD6600AF4F41 /* RadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				0898D9F2192AFD6600AF4F41 /* RadioButton.h */,
+				0898D9F3192AFD6600AF4F41 /* RadioButton.m */,
+			);
+			path = RadioButton;
+			sourceTree = "<group>";
+		};
+		0898D9FC192B00D200AF4F41 /* Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				0898D9FD192B00D200AF4F41 /* CheckBox.h */,
+				0898D9FE192B00D200AF4F41 /* CheckBox.m */,
+			);
+			path = Checkbox;
 			sourceTree = "<group>";
 		};
 		0899C26C18AC72B5003745FE /* UIImageView+FaceAwareFill */ = {
@@ -868,6 +894,7 @@
 				08D3A7B8173758FD00220430 /* UIImage+Auto_fit.m in Sources */,
 				08D3A8141737B74E00220430 /* NAPhoto.m in Sources */,
 				08D3A8151737B74E00220430 /* NAPhotoBrowser.m in Sources */,
+				0898D9FF192B00D200AF4F41 /* CheckBox.m in Sources */,
 				0899C2AE18ACCA96003745FE /* NSDate+Helper.m in Sources */,
 				08D3A8161737B74E00220430 /* UIImage+Decompress.m in Sources */,
 				08D3A8171737B74E00220430 /* UIImageViewTap.m in Sources */,
@@ -904,6 +931,7 @@
 				088604E6182B8B3F005E5755 /* HPTextViewInternal.m in Sources */,
 				0899C2A718ACC958003745FE /* UIImage+Tint.m in Sources */,
 				08A9D7081738D11D00CBE0BA /* TFHpple.m in Sources */,
+				0898D9F8192AFD6600AF4F41 /* RadioButton.m in Sources */,
 				08A9D7091738D11D00CBE0BA /* TFHppleElement.m in Sources */,
 				08A9D70A1738D11D00CBE0BA /* XPathQuery.m in Sources */,
 				08F9F06518AE07E300DF5815 /* XMLReader.m in Sources */,
