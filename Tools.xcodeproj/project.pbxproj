@@ -22,6 +22,8 @@
 		0851D36E18F3E72F005EA6BD /* STDb.m in Sources */ = {isa = PBXBuildFile; fileRef = 0851D36718F3E72F005EA6BD /* STDb.m */; };
 		0851D36F18F3E72F005EA6BD /* STDbHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0851D36918F3E72F005EA6BD /* STDbHandle.m */; };
 		0851D37018F3E72F005EA6BD /* STDbObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0851D36C18F3E72F005EA6BD /* STDbObject.m */; };
+		0865CA001946B11900806F93 /* BaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0865C9FF1946B11900806F93 /* BaseScrollView.m */; };
+		0865CA081946B5A800806F93 /* MBMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0865CA071946B5A800806F93 /* MBMenuView.m */; };
 		0885F4841733AA1800246C02 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0885F4831733AA1800246C02 /* UIKit.framework */; };
 		0885F4861733AA1800246C02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0885F4851733AA1800246C02 /* Foundation.framework */; };
 		0885F4881733AA1800246C02 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0885F4871733AA1800246C02 /* CoreGraphics.framework */; };
@@ -145,6 +147,10 @@
 		0851D36B18F3E72F005EA6BD /* STDbObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDbObject.h; sourceTree = "<group>"; };
 		0851D36C18F3E72F005EA6BD /* STDbObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDbObject.m; sourceTree = "<group>"; };
 		0851D36D18F3E72F005EA6BD /* STDbVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDbVersion.h; sourceTree = "<group>"; };
+		0865C9FE1946B11900806F93 /* BaseScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseScrollView.h; sourceTree = "<group>"; };
+		0865C9FF1946B11900806F93 /* BaseScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseScrollView.m; sourceTree = "<group>"; };
+		0865CA061946B5A800806F93 /* MBMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMenuView.h; sourceTree = "<group>"; };
+		0865CA071946B5A800806F93 /* MBMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMenuView.m; sourceTree = "<group>"; };
 		0885F47F1733AA1800246C02 /* Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0885F4831733AA1800246C02 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0885F4851733AA1800246C02 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -411,6 +417,10 @@
 			children = (
 				0885F4921733AA1800246C02 /* AppDelegate.h */,
 				0885F4931733AA1800246C02 /* AppDelegate.m */,
+				0865C9FE1946B11900806F93 /* BaseScrollView.h */,
+				0865C9FF1946B11900806F93 /* BaseScrollView.m */,
+				0865CA061946B5A800806F93 /* MBMenuView.h */,
+				0865CA071946B5A800806F93 /* MBMenuView.m */,
 				0885F4A01733AA3200246C02 /* ADTools.h */,
 				0885F4A11733AA3200246C02 /* ADTools.m */,
 				08ABB35D1749DD5E00DC543E /* Helper.h */,
@@ -918,6 +928,7 @@
 				0885F4A51733AB7300246C02 /* WQPDFManager.m in Sources */,
 				08D3A7B8173758FD00220430 /* UIImage+Auto_fit.m in Sources */,
 				08D3A8141737B74E00220430 /* NAPhoto.m in Sources */,
+				0865CA081946B5A800806F93 /* MBMenuView.m in Sources */,
 				08D3A8151737B74E00220430 /* NAPhotoBrowser.m in Sources */,
 				0898D9FF192B00D200AF4F41 /* CheckBox.m in Sources */,
 				08AC026F192EF0D1004BA73E /* NSObject+MKBlockAdditions.m in Sources */,
@@ -965,6 +976,7 @@
 				08D3C176174B04CC00406755 /* UIImageView+TapGesture.m in Sources */,
 				0803A6C01900EE46000623AA /* ASValuePopUpView.m in Sources */,
 				0899C28518ACA17F003745FE /* NSObject+LogDealloc.m in Sources */,
+				0865CA001946B11900806F93 /* BaseScrollView.m in Sources */,
 				08D15D54175DEA6E003002F9 /* Keychain.m in Sources */,
 				08035FCF1778463E00B145FA /* GTTabBar.m in Sources */,
 				08035FD01778463E00B145FA /* GTTabBarController.m in Sources */,
