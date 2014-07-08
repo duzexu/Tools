@@ -14,8 +14,10 @@
 		0803A6EA19011BE9000623AA /* NSObject+AutoDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 0803A6E719011BE9000623AA /* NSObject+AutoDescription.m */; };
 		0803A6EB19011BE9000623AA /* NSObject+CleanDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 0803A6E919011BE9000623AA /* NSObject+CleanDescription.m */; };
 		08054D0C179E6F84005F80BA /* BJImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = 08054D0B179E6F84005F80BA /* BJImageCropper.m */; };
+		0809975F196BD1CF004CE242 /* CycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0809975E196BD1CF004CE242 /* CycleScrollView.m */; };
 		080A9DFB178AAC1600874A8F /* iVersion.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 080A9DF8178AAC1600874A8F /* iVersion.bundle */; };
 		080A9DFC178AAC1600874A8F /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 080A9DFA178AAC1600874A8F /* iVersion.m */; };
+		08295BA71966AAF100A84280 /* UIViewController+childViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08295BA51966AAF100A84280 /* UIViewController+childViewController.m */; };
 		083C36011786C30400B4E095 /* SCGIFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 083C36001786C30400B4E095 /* SCGIFImageView.m */; };
 		084EBB4D184DD1BA00FAC37B /* MSKeyboardScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 084EBB4C184DD1BA00FAC37B /* MSKeyboardScrollView.m */; };
 		0851D36318F3E71A005EA6BD /* NSDate+Exts.m in Sources */ = {isa = PBXBuildFile; fileRef = 0851D36218F3E71A005EA6BD /* NSDate+Exts.m */; };
@@ -24,6 +26,9 @@
 		0851D37018F3E72F005EA6BD /* STDbObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0851D36C18F3E72F005EA6BD /* STDbObject.m */; };
 		0865CA001946B11900806F93 /* BaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0865C9FF1946B11900806F93 /* BaseScrollView.m */; };
 		0865CA081946B5A800806F93 /* MBMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0865CA071946B5A800806F93 /* MBMenuView.m */; };
+		086A65E71964FF50006A1FCB /* NSObject+ObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 086A65E61964FF50006A1FCB /* NSObject+ObjectMap.m */; };
+		086D31AF1959243B0003F60B /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 086D31AC1959243B0003F60B /* MenuItem.m */; };
+		086D31B01959243B0003F60B /* SideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 086D31AE1959243B0003F60B /* SideMenu.m */; };
 		0885F4841733AA1800246C02 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0885F4831733AA1800246C02 /* UIKit.framework */; };
 		0885F4861733AA1800246C02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0885F4851733AA1800246C02 /* Foundation.framework */; };
 		0885F4881733AA1800246C02 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0885F4871733AA1800246C02 /* CoreGraphics.framework */; };
@@ -130,9 +135,13 @@
 		0803A6E919011BE9000623AA /* NSObject+CleanDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CleanDescription.m"; sourceTree = "<group>"; };
 		08054D0A179E6F84005F80BA /* BJImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJImageCropper.h; sourceTree = "<group>"; };
 		08054D0B179E6F84005F80BA /* BJImageCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJImageCropper.m; sourceTree = "<group>"; };
+		0809975D196BD1CF004CE242 /* CycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleScrollView.h; sourceTree = "<group>"; };
+		0809975E196BD1CF004CE242 /* CycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleScrollView.m; sourceTree = "<group>"; };
 		080A9DF8178AAC1600874A8F /* iVersion.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iVersion.bundle; sourceTree = "<group>"; };
 		080A9DF9178AAC1600874A8F /* iVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iVersion.h; sourceTree = "<group>"; };
 		080A9DFA178AAC1600874A8F /* iVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVersion.m; sourceTree = "<group>"; };
+		08295BA51966AAF100A84280 /* UIViewController+childViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+childViewController.m"; sourceTree = "<group>"; };
+		08295BA61966AAF100A84280 /* UIViewController+childViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+childViewController.h"; sourceTree = "<group>"; };
 		083C35FF1786C30400B4E095 /* SCGIFImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGIFImageView.h; sourceTree = "<group>"; };
 		083C36001786C30400B4E095 /* SCGIFImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCGIFImageView.m; sourceTree = "<group>"; };
 		084EBB4B184DD1BA00FAC37B /* MSKeyboardScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSKeyboardScrollView.h; sourceTree = "<group>"; };
@@ -151,6 +160,12 @@
 		0865C9FF1946B11900806F93 /* BaseScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseScrollView.m; sourceTree = "<group>"; };
 		0865CA061946B5A800806F93 /* MBMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMenuView.h; sourceTree = "<group>"; };
 		0865CA071946B5A800806F93 /* MBMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMenuView.m; sourceTree = "<group>"; };
+		086A65E51964FF50006A1FCB /* NSObject+ObjectMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ObjectMap.h"; sourceTree = "<group>"; };
+		086A65E61964FF50006A1FCB /* NSObject+ObjectMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ObjectMap.m"; sourceTree = "<group>"; };
+		086D31AB1959243B0003F60B /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
+		086D31AC1959243B0003F60B /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
+		086D31AD1959243B0003F60B /* SideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenu.h; sourceTree = "<group>"; };
+		086D31AE1959243B0003F60B /* SideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenu.m; sourceTree = "<group>"; };
 		0885F47F1733AA1800246C02 /* Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0885F4831733AA1800246C02 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0885F4851733AA1800246C02 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -359,6 +374,15 @@
 			path = "截图";
 			sourceTree = "<group>";
 		};
+		0809975C196BD1CF004CE242 /* CycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				0809975D196BD1CF004CE242 /* CycleScrollView.h */,
+				0809975E196BD1CF004CE242 /* CycleScrollView.m */,
+			);
+			path = CycleScrollView;
+			sourceTree = "<group>";
+		};
 		080A9DF7178AAC1600874A8F /* iVersion */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +406,26 @@
 				0851D36D18F3E72F005EA6BD /* STDbVersion.h */,
 			);
 			path = STDB;
+			sourceTree = "<group>";
+		};
+		086A65E41964FF50006A1FCB /* NSObject-ObjectMap */ = {
+			isa = PBXGroup;
+			children = (
+				086A65E51964FF50006A1FCB /* NSObject+ObjectMap.h */,
+				086A65E61964FF50006A1FCB /* NSObject+ObjectMap.m */,
+			);
+			path = "NSObject-ObjectMap";
+			sourceTree = "<group>";
+		};
+		086D31AA1959243B0003F60B /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				086D31AB1959243B0003F60B /* MenuItem.h */,
+				086D31AC1959243B0003F60B /* MenuItem.m */,
+				086D31AD1959243B0003F60B /* SideMenu.h */,
+				086D31AE1959243B0003F60B /* SideMenu.m */,
+			);
+			path = SideMenu;
 			sourceTree = "<group>";
 		};
 		0885F4741733AA1800246C02 = {
@@ -448,6 +492,11 @@
 				0899C2A518ACC958003745FE /* UIImage+Tint.m */,
 				08F9F06318AE07E300DF5815 /* XMLReader.h */,
 				08F9F06418AE07E300DF5815 /* XMLReader.m */,
+				08295BA51966AAF100A84280 /* UIViewController+childViewController.m */,
+				08295BA61966AAF100A84280 /* UIViewController+childViewController.h */,
+				0809975C196BD1CF004CE242 /* CycleScrollView */,
+				086A65E41964FF50006A1FCB /* NSObject-ObjectMap */,
+				086D31AA1959243B0003F60B /* SideMenu */,
 				08AC0267192EF0D1004BA73E /* MKAdditions */,
 				0898D9FC192B00D200AF4F41 /* Checkbox */,
 				0898D9ED192AFD6600AF4F41 /* RadioButton */,
@@ -920,12 +969,14 @@
 				0885F4901733AA1800246C02 /* main.m in Sources */,
 				0885F4941733AA1800246C02 /* AppDelegate.m in Sources */,
 				0899C29118ACA2DE003745FE /* NSObject+SFExecuteOnDealloc.m in Sources */,
+				086A65E71964FF50006A1FCB /* NSObject+ObjectMap.m in Sources */,
 				0899C29518ACA520003745FE /* UIView+Recursion.m in Sources */,
 				0851D37018F3E72F005EA6BD /* STDbObject.m in Sources */,
 				0899C29018ACA2DE003745FE /* NSObject+SFObservers.m in Sources */,
 				0899C2A118ACB465003745FE /* Toast+UIView.m in Sources */,
 				0885F4A21733AA3200246C02 /* ADTools.m in Sources */,
 				0885F4A51733AB7300246C02 /* WQPDFManager.m in Sources */,
+				086D31AF1959243B0003F60B /* MenuItem.m in Sources */,
 				08D3A7B8173758FD00220430 /* UIImage+Auto_fit.m in Sources */,
 				08D3A8141737B74E00220430 /* NAPhoto.m in Sources */,
 				0865CA081946B5A800806F93 /* MBMenuView.m in Sources */,
@@ -959,9 +1010,11 @@
 				08D3A8661737B78D00220430 /* ImageMaskView.mm in Sources */,
 				08D3A8671737B78D00220430 /* main.m in Sources */,
 				0899C29D18ACB13C003745FE /* NSDate+Escort.m in Sources */,
+				08295BA71966AAF100A84280 /* UIViewController+childViewController.m in Sources */,
 				0899C26F18AC72B5003745FE /* UIImageView+UIImageView_FaceAwareFill.m in Sources */,
 				08D3A86A1737B78D00220430 /* MaskView.m in Sources */,
 				08D3A86B1737B78D00220430 /* Matrix.m in Sources */,
+				086D31B01959243B0003F60B /* SideMenu.m in Sources */,
 				0899C29918ACA94B003745FE /* UIView+RoundedCorners.m in Sources */,
 				08D3A86C1737B78D00220430 /* STScratchView.m in Sources */,
 				08D3A86D1737B78D00220430 /* ViewController.m in Sources */,
@@ -991,6 +1044,7 @@
 				088604E5182B8B3F005E5755 /* HPGrowingTextView.m in Sources */,
 				08BAC9FA1794F4810016CCFD /* ChineseToPinyin.m in Sources */,
 				0803A6EA19011BE9000623AA /* NSObject+AutoDescription.m in Sources */,
+				0809975F196BD1CF004CE242 /* CycleScrollView.m in Sources */,
 				08054D0C179E6F84005F80BA /* BJImageCropper.m in Sources */,
 				08DCA8AB17AA48DD00E3F528 /* UIImage+ImageEffects.m in Sources */,
 				08DCA96B17AA5A7E00E3F528 /* JScrollView+PageControl+AutoScroll.m in Sources */,
