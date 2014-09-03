@@ -24,11 +24,14 @@
 		0851D36E18F3E72F005EA6BD /* STDb.m in Sources */ = {isa = PBXBuildFile; fileRef = 0851D36718F3E72F005EA6BD /* STDb.m */; };
 		0851D36F18F3E72F005EA6BD /* STDbHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0851D36918F3E72F005EA6BD /* STDbHandle.m */; };
 		0851D37018F3E72F005EA6BD /* STDbObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0851D36C18F3E72F005EA6BD /* STDbObject.m */; };
+		0861327819B6F3A500BFDD6A /* UITableView+Wave.m in Sources */ = {isa = PBXBuildFile; fileRef = 0861327719B6F3A500BFDD6A /* UITableView+Wave.m */; };
 		0865CA001946B11900806F93 /* BaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0865C9FF1946B11900806F93 /* BaseScrollView.m */; };
 		0865CA081946B5A800806F93 /* MBMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0865CA071946B5A800806F93 /* MBMenuView.m */; };
 		086A65E71964FF50006A1FCB /* NSObject+ObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 086A65E61964FF50006A1FCB /* NSObject+ObjectMap.m */; };
 		086D31AF1959243B0003F60B /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 086D31AC1959243B0003F60B /* MenuItem.m */; };
 		086D31B01959243B0003F60B /* SideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 086D31AE1959243B0003F60B /* SideMenu.m */; };
+		08716F7F19B5CDA2004FC31F /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08716F7D19B5CDA2004FC31F /* AsyncImageView.m */; };
+		08716F8019B5CDA2004FC31F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 08716F7E19B5CDA2004FC31F /* README.md */; };
 		0885F4841733AA1800246C02 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0885F4831733AA1800246C02 /* UIKit.framework */; };
 		0885F4861733AA1800246C02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0885F4851733AA1800246C02 /* Foundation.framework */; };
 		0885F4881733AA1800246C02 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0885F4871733AA1800246C02 /* CoreGraphics.framework */; };
@@ -156,6 +159,8 @@
 		0851D36B18F3E72F005EA6BD /* STDbObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDbObject.h; sourceTree = "<group>"; };
 		0851D36C18F3E72F005EA6BD /* STDbObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STDbObject.m; sourceTree = "<group>"; };
 		0851D36D18F3E72F005EA6BD /* STDbVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STDbVersion.h; sourceTree = "<group>"; };
+		0861327619B6F3A500BFDD6A /* UITableView+Wave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Wave.h"; sourceTree = "<group>"; };
+		0861327719B6F3A500BFDD6A /* UITableView+Wave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Wave.m"; sourceTree = "<group>"; };
 		0865C9FE1946B11900806F93 /* BaseScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseScrollView.h; sourceTree = "<group>"; };
 		0865C9FF1946B11900806F93 /* BaseScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseScrollView.m; sourceTree = "<group>"; };
 		0865CA061946B5A800806F93 /* MBMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMenuView.h; sourceTree = "<group>"; };
@@ -166,6 +171,9 @@
 		086D31AC1959243B0003F60B /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
 		086D31AD1959243B0003F60B /* SideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenu.h; sourceTree = "<group>"; };
 		086D31AE1959243B0003F60B /* SideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenu.m; sourceTree = "<group>"; };
+		08716F7C19B5CDA2004FC31F /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
+		08716F7D19B5CDA2004FC31F /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
+		08716F7E19B5CDA2004FC31F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		0885F47F1733AA1800246C02 /* Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0885F4831733AA1800246C02 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0885F4851733AA1800246C02 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -408,6 +416,15 @@
 			path = STDB;
 			sourceTree = "<group>";
 		};
+		0861327519B6F3A500BFDD6A /* Wave */ = {
+			isa = PBXGroup;
+			children = (
+				0861327619B6F3A500BFDD6A /* UITableView+Wave.h */,
+				0861327719B6F3A500BFDD6A /* UITableView+Wave.m */,
+			);
+			path = Wave;
+			sourceTree = "<group>";
+		};
 		086A65E41964FF50006A1FCB /* NSObject-ObjectMap */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +443,16 @@
 				086D31AE1959243B0003F60B /* SideMenu.m */,
 			);
 			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		08716F7B19B5CDA2004FC31F /* AsyncImageView */ = {
+			isa = PBXGroup;
+			children = (
+				08716F7C19B5CDA2004FC31F /* AsyncImageView.h */,
+				08716F7D19B5CDA2004FC31F /* AsyncImageView.m */,
+				08716F7E19B5CDA2004FC31F /* README.md */,
+			);
+			path = AsyncImageView;
 			sourceTree = "<group>";
 		};
 		0885F4741733AA1800246C02 = {
@@ -494,6 +521,8 @@
 				08F9F06418AE07E300DF5815 /* XMLReader.m */,
 				08295BA51966AAF100A84280 /* UIViewController+childViewController.m */,
 				08295BA61966AAF100A84280 /* UIViewController+childViewController.h */,
+				0861327519B6F3A500BFDD6A /* Wave */,
+				08716F7B19B5CDA2004FC31F /* AsyncImageView */,
 				0809975C196BD1CF004CE242 /* CycleScrollView */,
 				086A65E41964FF50006A1FCB /* NSObject-ObjectMap */,
 				086D31AA1959243B0003F60B /* SideMenu */,
@@ -953,6 +982,7 @@
 				08D3A8641737B78D00220430 /* InfoPlist.strings in Resources */,
 				08D3A8651737B78D00220430 /* ViewController.xib in Resources */,
 				08D3A8681737B78D00220430 /* mask.png in Resources */,
+				08716F8019B5CDA2004FC31F /* README.md in Resources */,
 				08D3A8691737B78D00220430 /* MaskView-Info.plist in Resources */,
 				08B5DBB017794BE20078A68D /* CustomSwitch.xib in Resources */,
 				080A9DFB178AAC1600874A8F /* iVersion.bundle in Resources */,
@@ -972,6 +1002,7 @@
 				086A65E71964FF50006A1FCB /* NSObject+ObjectMap.m in Sources */,
 				0899C29518ACA520003745FE /* UIView+Recursion.m in Sources */,
 				0851D37018F3E72F005EA6BD /* STDbObject.m in Sources */,
+				08716F7F19B5CDA2004FC31F /* AsyncImageView.m in Sources */,
 				0899C29018ACA2DE003745FE /* NSObject+SFObservers.m in Sources */,
 				0899C2A118ACB465003745FE /* Toast+UIView.m in Sources */,
 				0885F4A21733AA3200246C02 /* ADTools.m in Sources */,
@@ -1013,6 +1044,7 @@
 				08295BA71966AAF100A84280 /* UIViewController+childViewController.m in Sources */,
 				0899C26F18AC72B5003745FE /* UIImageView+UIImageView_FaceAwareFill.m in Sources */,
 				08D3A86A1737B78D00220430 /* MaskView.m in Sources */,
+				0861327819B6F3A500BFDD6A /* UITableView+Wave.m in Sources */,
 				08D3A86B1737B78D00220430 /* Matrix.m in Sources */,
 				086D31B01959243B0003F60B /* SideMenu.m in Sources */,
 				0899C29918ACA94B003745FE /* UIView+RoundedCorners.m in Sources */,
