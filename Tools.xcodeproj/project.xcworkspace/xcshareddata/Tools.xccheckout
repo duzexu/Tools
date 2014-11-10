@@ -10,29 +10,29 @@
 	<string>Tools</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>4E8C8E9E-BD9C-4340-AC76-0D83332D61F8</key>
+		<key>75C9AED620D42A60C5C2140B6A710FD8CFA33795</key>
 		<string>https://github.com/duzexu/Tools.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Tools.xcodeproj/project.xcworkspace</string>
+	<string>Tools.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>4E8C8E9E-BD9C-4340-AC76-0D83332D61F8</key>
+		<key>75C9AED620D42A60C5C2140B6A710FD8CFA33795</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/duzexu/Tools.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>4E8C8E9E-BD9C-4340-AC76-0D83332D61F8</string>
+	<string>75C9AED620D42A60C5C2140B6A710FD8CFA33795</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>4E8C8E9E-BD9C-4340-AC76-0D83332D61F8</string>
+			<string>75C9AED620D42A60C5C2140B6A710FD8CFA33795</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Tools</string>
 		</dict>
