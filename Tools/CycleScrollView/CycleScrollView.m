@@ -8,21 +8,17 @@
 
 #import "CycleScrollView.h"
 
-@implementation CycleScrollView
-
-@synthesize scrollView = _scrollView;
-@synthesize pageControl = _pageControl;
-@synthesize currentPage = _curPage;
-@synthesize datasource = _datasource;
-@synthesize delegate = _delegate;
-
-- (void)dealloc
+@interface CycleScrollView ()<UIScrollViewDelegate>
 {
-    [_scrollView release];
-    [_pageControl release];
-    [_curViews release];
-    [super dealloc];
+    NSInteger _totalPages;
+    NSInteger _curPage;
+    
+    NSMutableArray *_visiableViews;
 }
+
+@end
+
+@implementation CycleScrollView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -57,34 +53,37 @@
     [self reloadData];
 }
 
+- (NSInteger)currentPage
+{
+    return _curPage;
+}
+
 - (void)reloadData
 {
-    _totalPages = [_datasource numberOfPages];
+    _totalPages = [_datasource numberOfPagesInCycleScrollView:self];
     if (_totalPages == 0) {
         return;
     }
     _pageControl.numberOfPages = _totalPages;
     if (!_cycleEnabled) {
+        _pageControl.currentPage = _curPage;
         //从scrollView上移除所有的subview
-        NSArray *subViews = [_scrollView subviews];
+        NSArray *subViews= [_scrollView subviews];
         if([subViews count] != 0) {
             [subViews makeObjectsPerformSelector:@selector(removeFromSuperview)];
         }
         
-        [self getDisplayImagesWithCurpage:_curPage];
+        [self getDisplayImagesWithCurpage:_curPage+1];
         
         for (int i = 0; i < 3; i++) {
-            UIView *v = [_curViews objectAtIndex:i];
-            v.userInteractionEnabled = YES;
-            UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                        action:@selector(handleTap:)];
-            [v addGestureRecognizer:singleTap];
-            [singleTap release];
-            v.frame = CGRectOffset(v.frame, v.frame.size.width * i, 0);
+            UIView *v = [_visiableViews objectAtIndex:i];
+            CGRect frame = v.frame;
+            frame.origin.x = 0;
+            v.frame = CGRectOffset(frame, v.frame.size.width * i, 0);
             [_scrollView addSubview:v];
         }
         
-        [_scrollView setContentOffset:CGPointMake(_scrollView.frame.size.width, 0)];
+        [_scrollView setContentOffset:CGPointMake(0, 0)];
     }
     [self loadData];
 }
@@ -108,48 +107,44 @@
     [self getDisplayImagesWithCurpage:_curPage];
     
     for (int i = 0; i < 3; i++) {
-        UIView *v = [_curViews objectAtIndex:i];
-        v.userInteractionEnabled = YES;
-        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                    action:@selector(handleTap:)];
-        [v addGestureRecognizer:singleTap];
-        [singleTap release];
-        v.frame = CGRectOffset(v.frame, v.frame.size.width * i, 0);
+        UIView *v = [_visiableViews objectAtIndex:i];
+        CGRect frame = v.frame;
+        frame.origin.x = 0;
+        v.frame = CGRectOffset(frame, v.frame.size.width * i, 0);
         [_scrollView addSubview:v];
     }
     
     [_scrollView setContentOffset:CGPointMake(_scrollView.frame.size.width, 0)];
 }
 
-- (void)getDisplayImagesWithCurpage:(int)page {
+- (void)getDisplayImagesWithCurpage:(NSInteger)page {
     
-    int pre = [self validPageValue:_curPage-1];
-    int last = [self validPageValue:_curPage+1];
+    NSInteger pre = [self validPageValue:page-1];
+    NSInteger last = [self validPageValue:page+1];
     
-    if (!_curViews) {
-        _curViews = [[NSMutableArray alloc] init];
+    if (!_visiableViews) {
+        _visiableViews = [[NSMutableArray alloc] init];
     }
     
-    [_curViews removeAllObjects];
+    [_visiableViews removeAllObjects];
+
     UIView *clean = [[UIView alloc]initWithFrame:self.bounds];
-    if (!_cycleEnabled && _curPage <= 0) {
-        [_curViews addObject:clean];
+    if (!_cycleEnabled && page <= 0) {
+        [_visiableViews addObject:clean];
     }else{
-        [_curViews addObject:[_datasource pageAtIndex:pre]];
+        [_visiableViews addObject:[_datasource cycleScrollView:self viewForRowAtIndex:pre]];
     }
     
-    [_curViews addObject:[_datasource pageAtIndex:page]];
+    [_visiableViews addObject:[_datasource cycleScrollView:self viewForRowAtIndex:page]];
     
-    if (!_cycleEnabled && _curPage >= _totalPages-1) {
-        [_curViews addObject:clean];
+    if (!_cycleEnabled && page >= _totalPages-1) {
+        [_visiableViews addObject:clean];
     }else{
-        [_curViews addObject:[_datasource pageAtIndex:last]];
+        [_visiableViews addObject:[_datasource cycleScrollView:self viewForRowAtIndex:last]];
     }
-    [clean release];
- 
 }
 
-- (int)validPageValue:(NSInteger)value {
+- (NSInteger)validPageValue:(NSInteger)value {
     
     if(value == -1) value = _totalPages - 1;
     if(value == _totalPages) value = 0;
@@ -158,25 +153,12 @@
     
 }
 
-- (void)handleTap:(UITapGestureRecognizer *)tap {
-    
-    if ([_delegate respondsToSelector:@selector(didClickPage:atIndex:)]) {
-        [_delegate didClickPage:self atIndex:_curPage];
-    }
-    
-}
-
 - (void)setViewContent:(UIView *)view atIndex:(NSInteger)index
 {
     if (index == _curPage) {
-        [_curViews replaceObjectAtIndex:1 withObject:view];
+        [_visiableViews replaceObjectAtIndex:1 withObject:view];
         for (int i = 0; i < 3; i++) {
-            UIView *v = [_curViews objectAtIndex:i];
-            v.userInteractionEnabled = YES;
-            UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                        action:@selector(handleTap:)];
-            [v addGestureRecognizer:singleTap];
-            [singleTap release];
+            UIView *v = [_visiableViews objectAtIndex:i];
             v.frame = CGRectOffset(v.frame, v.frame.size.width * i, 0);
             [_scrollView addSubview:v];
         }
