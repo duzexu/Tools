@@ -17,7 +17,7 @@
 @property (nonatomic,readonly) UIPageControl *pageControl;
 @property (nonatomic,assign) NSInteger currentPage;
 @property (assign, nonatomic,getter = isCycleEnabled) BOOL cycleEnabled; // Default is Yes 
-@property (nonatomic,assign,setter = setDataource:) id<CycleScrollViewDatasource> datasource;
+@property (nonatomic,weak,setter = setDataource:) id<CycleScrollViewDatasource> datasource;
 
 - (void)reloadData;
 - (void)setViewContent:(UIView *)view atIndex:(NSInteger)index;
