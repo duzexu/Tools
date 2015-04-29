@@ -63,6 +63,7 @@
 		0899C2A618ACC958003745FE /* UIImage+ProportionalFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 0899C2A318ACC958003745FE /* UIImage+ProportionalFill.m */; };
 		0899C2A718ACC958003745FE /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0899C2A518ACC958003745FE /* UIImage+Tint.m */; };
 		0899C2AE18ACCA96003745FE /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0899C2AD18ACCA96003745FE /* NSDate+Helper.m */; };
+		089B31721AE4D300007B2EA3 /* UIScrollView+ParallaxHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 089B31711AE4D300007B2EA3 /* UIScrollView+ParallaxHeader.m */; };
 		089E0608186D7D51009743F7 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 089E0607186D7D51009743F7 /* UIView+Utils.m */; };
 		08A9D7081738D11D00CBE0BA /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A9D7031738D11D00CBE0BA /* TFHpple.m */; };
 		08A9D7091738D11D00CBE0BA /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A9D7051738D11D00CBE0BA /* TFHppleElement.m */; };
@@ -232,6 +233,8 @@
 		0899C2A518ACC958003745FE /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
 		0899C2AC18ACCA96003745FE /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
 		0899C2AD18ACCA96003745FE /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
+		089B31701AE4D300007B2EA3 /* UIScrollView+ParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ParallaxHeader.h"; sourceTree = "<group>"; };
+		089B31711AE4D300007B2EA3 /* UIScrollView+ParallaxHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ParallaxHeader.m"; sourceTree = "<group>"; };
 		089E0606186D7D51009743F7 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
 		089E0607186D7D51009743F7 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 		08A9D7021738D11D00CBE0BA /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
@@ -521,6 +524,8 @@
 				08F9F06418AE07E300DF5815 /* XMLReader.m */,
 				08295BA51966AAF100A84280 /* UIViewController+childViewController.m */,
 				08295BA61966AAF100A84280 /* UIViewController+childViewController.h */,
+				089B31701AE4D300007B2EA3 /* UIScrollView+ParallaxHeader.h */,
+				089B31711AE4D300007B2EA3 /* UIScrollView+ParallaxHeader.m */,
 				0861327519B6F3A500BFDD6A /* Wave */,
 				08716F7B19B5CDA2004FC31F /* AsyncImageView */,
 				0809975C196BD1CF004CE242 /* CycleScrollView */,
@@ -1060,6 +1065,7 @@
 				08F9F06518AE07E300DF5815 /* XMLReader.m in Sources */,
 				08D3C176174B04CC00406755 /* UIImageView+TapGesture.m in Sources */,
 				0803A6C01900EE46000623AA /* ASValuePopUpView.m in Sources */,
+				089B31721AE4D300007B2EA3 /* UIScrollView+ParallaxHeader.m in Sources */,
 				0899C28518ACA17F003745FE /* NSObject+LogDealloc.m in Sources */,
 				0865CA001946B11900806F93 /* BaseScrollView.m in Sources */,
 				08D15D54175DEA6E003002F9 /* Keychain.m in Sources */,
