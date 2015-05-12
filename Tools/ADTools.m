@@ -377,4 +377,16 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector)  {  
     }
 }
 
+//找到view转换后的坐标
+- (void)method
+{
+    UIView *view = nil;
+    CGPoint originCenter = CGPointApplyAffineTransform(view.center, CGAffineTransformInvert(view.transform));
+    CGPoint topRight = originCenter;
+    topRight.x += view.bounds.size.width/2.0;
+    topRight.y -= view.bounds.size.height/2.0;
+    topRight = CGPointApplyAffineTransform(topRight, view.transform);
+}
+
+
 @end
