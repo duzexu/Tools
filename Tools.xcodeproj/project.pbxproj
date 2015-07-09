@@ -14,7 +14,6 @@
 		0803A6EA19011BE9000623AA /* NSObject+AutoDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 0803A6E719011BE9000623AA /* NSObject+AutoDescription.m */; };
 		0803A6EB19011BE9000623AA /* NSObject+CleanDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 0803A6E919011BE9000623AA /* NSObject+CleanDescription.m */; };
 		08054D0C179E6F84005F80BA /* BJImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = 08054D0B179E6F84005F80BA /* BJImageCropper.m */; };
-		0809975F196BD1CF004CE242 /* CycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0809975E196BD1CF004CE242 /* CycleScrollView.m */; };
 		080A9DFB178AAC1600874A8F /* iVersion.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 080A9DF8178AAC1600874A8F /* iVersion.bundle */; };
 		080A9DFC178AAC1600874A8F /* iVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 080A9DFA178AAC1600874A8F /* iVersion.m */; };
 		08295BA71966AAF100A84280 /* UIViewController+childViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08295BA51966AAF100A84280 /* UIViewController+childViewController.m */; };
@@ -112,6 +111,7 @@
 		08DCA8AB17AA48DD00E3F528 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DCA8AA17AA48DD00E3F528 /* UIImage+ImageEffects.m */; };
 		08DCA96B17AA5A7E00E3F528 /* JScrollView+PageControl+AutoScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DCA96A17AA5A7E00E3F528 /* JScrollView+PageControl+AutoScroll.m */; };
 		08F9F06518AE07E300DF5815 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F9F06418AE07E300DF5815 /* XMLReader.m */; };
+		6DFE4B781B4E1CC300A009CE /* IDNLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE4B771B4E1CC300A009CE /* IDNLoopView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,8 +139,6 @@
 		0803A6E919011BE9000623AA /* NSObject+CleanDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CleanDescription.m"; sourceTree = "<group>"; };
 		08054D0A179E6F84005F80BA /* BJImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJImageCropper.h; sourceTree = "<group>"; };
 		08054D0B179E6F84005F80BA /* BJImageCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJImageCropper.m; sourceTree = "<group>"; };
-		0809975D196BD1CF004CE242 /* CycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleScrollView.h; sourceTree = "<group>"; };
-		0809975E196BD1CF004CE242 /* CycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleScrollView.m; sourceTree = "<group>"; };
 		080A9DF8178AAC1600874A8F /* iVersion.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iVersion.bundle; sourceTree = "<group>"; };
 		080A9DF9178AAC1600874A8F /* iVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iVersion.h; sourceTree = "<group>"; };
 		080A9DFA178AAC1600874A8F /* iVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVersion.m; sourceTree = "<group>"; };
@@ -326,6 +324,8 @@
 		08DCA96A17AA5A7E00E3F528 /* JScrollView+PageControl+AutoScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JScrollView+PageControl+AutoScroll.m"; sourceTree = "<group>"; };
 		08F9F06318AE07E300DF5815 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
 		08F9F06418AE07E300DF5815 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
+		6DFE4B761B4E1CC300A009CE /* IDNLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDNLoopView.h; path = Tools/IDNLoopView.h; sourceTree = SOURCE_ROOT; };
+		6DFE4B771B4E1CC300A009CE /* IDNLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDNLoopView.m; path = Tools/IDNLoopView.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -388,8 +388,8 @@
 		0809975C196BD1CF004CE242 /* CycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				0809975D196BD1CF004CE242 /* CycleScrollView.h */,
-				0809975E196BD1CF004CE242 /* CycleScrollView.m */,
+				6DFE4B761B4E1CC300A009CE /* IDNLoopView.h */,
+				6DFE4B771B4E1CC300A009CE /* IDNLoopView.m */,
 			);
 			path = CycleScrollView;
 			sourceTree = "<group>";
@@ -1011,6 +1011,7 @@
 				0899C29018ACA2DE003745FE /* NSObject+SFObservers.m in Sources */,
 				0899C2A118ACB465003745FE /* Toast+UIView.m in Sources */,
 				0885F4A21733AA3200246C02 /* ADTools.m in Sources */,
+				6DFE4B781B4E1CC300A009CE /* IDNLoopView.m in Sources */,
 				0885F4A51733AB7300246C02 /* WQPDFManager.m in Sources */,
 				086D31AF1959243B0003F60B /* MenuItem.m in Sources */,
 				08D3A7B8173758FD00220430 /* UIImage+Auto_fit.m in Sources */,
@@ -1082,7 +1083,6 @@
 				088604E5182B8B3F005E5755 /* HPGrowingTextView.m in Sources */,
 				08BAC9FA1794F4810016CCFD /* ChineseToPinyin.m in Sources */,
 				0803A6EA19011BE9000623AA /* NSObject+AutoDescription.m in Sources */,
-				0809975F196BD1CF004CE242 /* CycleScrollView.m in Sources */,
 				08054D0C179E6F84005F80BA /* BJImageCropper.m in Sources */,
 				08DCA8AB17AA48DD00E3F528 /* UIImage+ImageEffects.m in Sources */,
 				08DCA96B17AA5A7E00E3F528 /* JScrollView+PageControl+AutoScroll.m in Sources */,
