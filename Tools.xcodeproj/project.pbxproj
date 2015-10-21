@@ -111,6 +111,11 @@
 		08DCA8AB17AA48DD00E3F528 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DCA8AA17AA48DD00E3F528 /* UIImage+ImageEffects.m */; };
 		08DCA96B17AA5A7E00E3F528 /* JScrollView+PageControl+AutoScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DCA96A17AA5A7E00E3F528 /* JScrollView+PageControl+AutoScroll.m */; };
 		08F9F06518AE07E300DF5815 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F9F06418AE07E300DF5815 /* XMLReader.m */; };
+		6D5E0F6F1B8C531E00B78C5D /* ADRadiusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5E0F6D1B8C531E00B78C5D /* ADRadiusView.m */; };
+		6D5E0F771B8D5E8900B78C5D /* UILabel+BezierAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5E0F741B8D5E8900B78C5D /* UILabel+BezierAnimation.m */; };
+		6D5E0F781B8D5E8900B78C5D /* WSBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5E0F761B8D5E8900B78C5D /* WSBezier.m */; };
+		6DB7BACA1BA9A184003C4F6E /* UIControl+TapLimit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB7BAC91BA9A184003C4F6E /* UIControl+TapLimit.m */; };
+		6DC359151B5783B10015A680 /* LaunchPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC359141B5783B10015A680 /* LaunchPlayerView.m */; };
 		6DFE4B781B4E1CC300A009CE /* IDNLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE4B771B4E1CC300A009CE /* IDNLoopView.m */; };
 /* End PBXBuildFile section */
 
@@ -324,6 +329,16 @@
 		08DCA96A17AA5A7E00E3F528 /* JScrollView+PageControl+AutoScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JScrollView+PageControl+AutoScroll.m"; sourceTree = "<group>"; };
 		08F9F06318AE07E300DF5815 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
 		08F9F06418AE07E300DF5815 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
+		6D5E0F6D1B8C531E00B78C5D /* ADRadiusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADRadiusView.m; sourceTree = "<group>"; };
+		6D5E0F6E1B8C531E00B78C5D /* ADRadiusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADRadiusView.h; sourceTree = "<group>"; };
+		6D5E0F731B8D5E8900B78C5D /* UILabel+BezierAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+BezierAnimation.h"; sourceTree = "<group>"; };
+		6D5E0F741B8D5E8900B78C5D /* UILabel+BezierAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+BezierAnimation.m"; sourceTree = "<group>"; };
+		6D5E0F751B8D5E8900B78C5D /* WSBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSBezier.h; sourceTree = "<group>"; };
+		6D5E0F761B8D5E8900B78C5D /* WSBezier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSBezier.m; sourceTree = "<group>"; };
+		6DB7BAC81BA9A184003C4F6E /* UIControl+TapLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+TapLimit.h"; sourceTree = "<group>"; };
+		6DB7BAC91BA9A184003C4F6E /* UIControl+TapLimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+TapLimit.m"; sourceTree = "<group>"; };
+		6DC359131B5783B00015A680 /* LaunchPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchPlayerView.h; sourceTree = "<group>"; };
+		6DC359141B5783B10015A680 /* LaunchPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchPlayerView.m; sourceTree = "<group>"; };
 		6DFE4B761B4E1CC300A009CE /* IDNLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDNLoopView.h; path = Tools/IDNLoopView.h; sourceTree = SOURCE_ROOT; };
 		6DFE4B771B4E1CC300A009CE /* IDNLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDNLoopView.m; path = Tools/IDNLoopView.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -491,6 +506,10 @@
 			children = (
 				0885F4921733AA1800246C02 /* AppDelegate.h */,
 				0885F4931733AA1800246C02 /* AppDelegate.m */,
+				6DC359131B5783B00015A680 /* LaunchPlayerView.h */,
+				6DC359141B5783B10015A680 /* LaunchPlayerView.m */,
+				6D5E0F6E1B8C531E00B78C5D /* ADRadiusView.h */,
+				6D5E0F6D1B8C531E00B78C5D /* ADRadiusView.m */,
 				0865C9FE1946B11900806F93 /* BaseScrollView.h */,
 				0865C9FF1946B11900806F93 /* BaseScrollView.m */,
 				0865CA061946B5A800806F93 /* MBMenuView.h */,
@@ -498,6 +517,8 @@
 				0885F4A01733AA3200246C02 /* ADTools.h */,
 				0885F4A11733AA3200246C02 /* ADTools.m */,
 				08ABB35D1749DD5E00DC543E /* Helper.h */,
+				6DB7BAC81BA9A184003C4F6E /* UIControl+TapLimit.h */,
+				6DB7BAC91BA9A184003C4F6E /* UIControl+TapLimit.m */,
 				08D3A7B6173758FD00220430 /* UIImage+Auto_fit.h */,
 				08D3A7B7173758FD00220430 /* UIImage+Auto_fit.m */,
 				089E0606186D7D51009743F7 /* UIView+Utils.h */,
@@ -526,6 +547,7 @@
 				08295BA61966AAF100A84280 /* UIViewController+childViewController.h */,
 				089B31701AE4D300007B2EA3 /* UIScrollView+ParallaxHeader.h */,
 				089B31711AE4D300007B2EA3 /* UIScrollView+ParallaxHeader.m */,
+				6D5E0F721B8D5E8900B78C5D /* WSBezierAnimation */,
 				0861327519B6F3A500BFDD6A /* Wave */,
 				08716F7B19B5CDA2004FC31F /* AsyncImageView */,
 				0809975C196BD1CF004CE242 /* CycleScrollView */,
@@ -910,6 +932,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6D5E0F721B8D5E8900B78C5D /* WSBezierAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				6D5E0F731B8D5E8900B78C5D /* UILabel+BezierAnimation.h */,
+				6D5E0F741B8D5E8900B78C5D /* UILabel+BezierAnimation.m */,
+				6D5E0F751B8D5E8900B78C5D /* WSBezier.h */,
+				6D5E0F761B8D5E8900B78C5D /* WSBezier.m */,
+			);
+			path = WSBezierAnimation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1013,6 +1046,7 @@
 				0885F4A21733AA3200246C02 /* ADTools.m in Sources */,
 				6DFE4B781B4E1CC300A009CE /* IDNLoopView.m in Sources */,
 				0885F4A51733AB7300246C02 /* WQPDFManager.m in Sources */,
+				6D5E0F771B8D5E8900B78C5D /* UILabel+BezierAnimation.m in Sources */,
 				086D31AF1959243B0003F60B /* MenuItem.m in Sources */,
 				08D3A7B8173758FD00220430 /* UIImage+Auto_fit.m in Sources */,
 				08D3A8141737B74E00220430 /* NAPhoto.m in Sources */,
@@ -1020,6 +1054,7 @@
 				08D3A8151737B74E00220430 /* NAPhotoBrowser.m in Sources */,
 				0898D9FF192B00D200AF4F41 /* CheckBox.m in Sources */,
 				08AC026F192EF0D1004BA73E /* NSObject+MKBlockAdditions.m in Sources */,
+				6D5E0F781B8D5E8900B78C5D /* WSBezier.m in Sources */,
 				0899C2AE18ACCA96003745FE /* NSDate+Helper.m in Sources */,
 				08AC0271192EF0D1004BA73E /* UIAlertView+MKBlockAdditions.m in Sources */,
 				08D3A8161737B74E00220430 /* UIImage+Decompress.m in Sources */,
@@ -1041,6 +1076,7 @@
 				08D3A83D1737B76700220430 /* UIScreen+Scale.m in Sources */,
 				08D3A83E1737B76700220430 /* UIView+Screenshot.m in Sources */,
 				0899C27418AC98CD003745FE /* AutoCoding.m in Sources */,
+				6DC359151B5783B10015A680 /* LaunchPlayerView.m in Sources */,
 				0803A6EB19011BE9000623AA /* NSObject+CleanDescription.m in Sources */,
 				08D3A8421737B77F00220430 /* SliderControl.m in Sources */,
 				08D3A8621737B78D00220430 /* AppDelegate.m in Sources */,
@@ -1063,6 +1099,7 @@
 				0898D9F8192AFD6600AF4F41 /* RadioButton.m in Sources */,
 				08A9D7091738D11D00CBE0BA /* TFHppleElement.m in Sources */,
 				08A9D70A1738D11D00CBE0BA /* XPathQuery.m in Sources */,
+				6DB7BACA1BA9A184003C4F6E /* UIControl+TapLimit.m in Sources */,
 				08F9F06518AE07E300DF5815 /* XMLReader.m in Sources */,
 				08D3C176174B04CC00406755 /* UIImageView+TapGesture.m in Sources */,
 				0803A6C01900EE46000623AA /* ASValuePopUpView.m in Sources */,
@@ -1086,6 +1123,7 @@
 				08054D0C179E6F84005F80BA /* BJImageCropper.m in Sources */,
 				08DCA8AB17AA48DD00E3F528 /* UIImage+ImageEffects.m in Sources */,
 				08DCA96B17AA5A7E00E3F528 /* JScrollView+PageControl+AutoScroll.m in Sources */,
+				6D5E0F6F1B8C531E00B78C5D /* ADRadiusView.m in Sources */,
 				08AC0270192EF0D1004BA73E /* UIActionSheet+MKBlockAdditions.m in Sources */,
 				0899C28118AC9F99003745FE /* NSObject+Association.m in Sources */,
 			);

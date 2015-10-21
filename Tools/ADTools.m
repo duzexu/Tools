@@ -24,6 +24,7 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES%@",emailRegex];
     return [emailTest evaluateWithObject:email];
 }
+
 /**
  *  @brief  图片形状改变
  *
