@@ -117,6 +117,7 @@
 		6DB7BACA1BA9A184003C4F6E /* UIControl+TapLimit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB7BAC91BA9A184003C4F6E /* UIControl+TapLimit.m */; };
 		6DC359151B5783B10015A680 /* LaunchPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC359141B5783B10015A680 /* LaunchPlayerView.m */; };
 		6DFE4B781B4E1CC300A009CE /* IDNLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE4B771B4E1CC300A009CE /* IDNLoopView.m */; };
+		BE1C4C4D1CA003E5004BC9C2 /* UIImage+Compress.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C4C4C1CA003E5004BC9C2 /* UIImage+Compress.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -342,6 +343,8 @@
 		6DC359141B5783B10015A680 /* LaunchPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchPlayerView.m; sourceTree = "<group>"; };
 		6DFE4B761B4E1CC300A009CE /* IDNLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDNLoopView.h; path = Tools/IDNLoopView.h; sourceTree = SOURCE_ROOT; };
 		6DFE4B771B4E1CC300A009CE /* IDNLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDNLoopView.m; path = Tools/IDNLoopView.m; sourceTree = SOURCE_ROOT; };
+		BE1C4C4B1CA003E5004BC9C2 /* UIImage+Compress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Compress.h"; sourceTree = "<group>"; };
+		BE1C4C4C1CA003E5004BC9C2 /* UIImage+Compress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Compress.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -539,6 +542,8 @@
 				08DCA96A17AA5A7E00E3F528 /* JScrollView+PageControl+AutoScroll.m */,
 				084EBB4B184DD1BA00FAC37B /* MSKeyboardScrollView.h */,
 				084EBB4C184DD1BA00FAC37B /* MSKeyboardScrollView.m */,
+				BE1C4C4B1CA003E5004BC9C2 /* UIImage+Compress.h */,
+				BE1C4C4C1CA003E5004BC9C2 /* UIImage+Compress.m */,
 				0899C2A218ACC958003745FE /* UIImage+ProportionalFill.h */,
 				0899C2A318ACC958003745FE /* UIImage+ProportionalFill.m */,
 				0899C2A418ACC958003745FE /* UIImage+Tint.h */,
@@ -1118,6 +1123,7 @@
 				083C36011786C30400B4E095 /* SCGIFImageView.m in Sources */,
 				080A9DFC178AAC1600874A8F /* iVersion.m in Sources */,
 				084EBB4D184DD1BA00FAC37B /* MSKeyboardScrollView.m in Sources */,
+				BE1C4C4D1CA003E5004BC9C2 /* UIImage+Compress.m in Sources */,
 				0851D36E18F3E72F005EA6BD /* STDb.m in Sources */,
 				088604E5182B8B3F005E5755 /* HPGrowingTextView.m in Sources */,
 				08BAC9FA1794F4810016CCFD /* ChineseToPinyin.m in Sources */,
