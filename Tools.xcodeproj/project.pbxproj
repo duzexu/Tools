@@ -118,6 +118,7 @@
 		6DC359151B5783B10015A680 /* LaunchPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC359141B5783B10015A680 /* LaunchPlayerView.m */; };
 		6DFE4B781B4E1CC300A009CE /* IDNLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE4B771B4E1CC300A009CE /* IDNLoopView.m */; };
 		BE1C4C4D1CA003E5004BC9C2 /* UIImage+Compress.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C4C4C1CA003E5004BC9C2 /* UIImage+Compress.m */; };
+		BE3F75881CA0EA1200BF4B30 /* HJCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3F75871CA0EA1200BF4B30 /* HJCornerRadius.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -345,6 +346,8 @@
 		6DFE4B771B4E1CC300A009CE /* IDNLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDNLoopView.m; path = Tools/IDNLoopView.m; sourceTree = SOURCE_ROOT; };
 		BE1C4C4B1CA003E5004BC9C2 /* UIImage+Compress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Compress.h"; sourceTree = "<group>"; };
 		BE1C4C4C1CA003E5004BC9C2 /* UIImage+Compress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Compress.m"; sourceTree = "<group>"; };
+		BE3F75861CA0EA1200BF4B30 /* HJCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCornerRadius.h; sourceTree = "<group>"; };
+		BE3F75871CA0EA1200BF4B30 /* HJCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCornerRadius.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -554,6 +557,7 @@
 				08295BA61966AAF100A84280 /* UIViewController+childViewController.h */,
 				089B31701AE4D300007B2EA3 /* UIScrollView+ParallaxHeader.h */,
 				089B31711AE4D300007B2EA3 /* UIScrollView+ParallaxHeader.m */,
+				BE3F75851CA0EA1200BF4B30 /* HJCornerRadius */,
 				6D5E0F721B8D5E8900B78C5D /* WSBezierAnimation */,
 				0861327519B6F3A500BFDD6A /* Wave */,
 				08716F7B19B5CDA2004FC31F /* AsyncImageView */,
@@ -950,6 +954,15 @@
 			path = WSBezierAnimation;
 			sourceTree = "<group>";
 		};
+		BE3F75851CA0EA1200BF4B30 /* HJCornerRadius */ = {
+			isa = PBXGroup;
+			children = (
+				BE3F75861CA0EA1200BF4B30 /* HJCornerRadius.h */,
+				BE3F75871CA0EA1200BF4B30 /* HJCornerRadius.m */,
+			);
+			path = HJCornerRadius;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1089,6 +1102,7 @@
 				08D3A8621737B78D00220430 /* AppDelegate.m in Sources */,
 				08D3A8661737B78D00220430 /* ImageMaskView.mm in Sources */,
 				08D3A8671737B78D00220430 /* main.m in Sources */,
+				BE3F75881CA0EA1200BF4B30 /* HJCornerRadius.m in Sources */,
 				0899C29D18ACB13C003745FE /* NSDate+Escort.m in Sources */,
 				08295BA71966AAF100A84280 /* UIViewController+childViewController.m in Sources */,
 				0899C26F18AC72B5003745FE /* UIImageView+UIImageView_FaceAwareFill.m in Sources */,
