@@ -10,6 +10,9 @@
 #import <QuartzCore/QuartzCore.h>
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <netdb.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <Photos/Photos.h>
+
 @implementation ADTools
 /**
  *  @brief  判断邮箱格式是否正确 利用正则表达式验证
@@ -389,5 +392,357 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector)  {  
     topRight = CGPointApplyAffineTransform(topRight, view.transform);
 }
 
+#pragma mark - 富文本操作
+
+/**
+ *  单纯改变一句话中的某些字的颜色
+ *
+ *  @param color    需要改变成的颜色
+ *  @param totalStr 总的字符串
+ *  @param subArray 需要改变颜色的文字数组
+ *
+ *  @return 生成的富文本
+ */
++ (NSMutableAttributedString *)ls_changeCorlorWithColor:(UIColor *)color TotalString:(NSString *)totalStr SubStringArray:(NSArray *)subArray {
+    
+    NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString:totalStr];
+    for (NSString *rangeStr in subArray) {
+        
+        NSMutableArray *array = [self ls_getRangeWithTotalString:totalStr SubString:rangeStr];
+        
+        for (NSNumber *rangeNum in array) {
+            
+            NSRange range = [rangeNum rangeValue];
+            [attributedStr addAttribute:NSForegroundColorAttributeName value:color range:range];
+        }
+        
+    }
+    
+    return attributedStr;
+}
+
+/**
+ *  单纯改变句子的字间距（需要 <CoreText/CoreText.h>）
+ *
+ *  @param totalString 需要更改的字符串
+ *  @param space       字间距
+ *
+ *  @return 生成的富文本
+ */
++ (NSMutableAttributedString *)ls_changeSpaceWithTotalString:(NSString *)totalString Space:(CGFloat)space {
+    
+    NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString:totalString];
+    long number = space;
+    CFNumberRef num = CFNumberCreate(kCFAllocatorDefault,kCFNumberSInt8Type,&number);
+    [attributedStr addAttribute:(id)kCTKernAttributeName value:(__bridge id)num range:NSMakeRange(0,[attributedStr length])];
+    CFRelease(num);
+    
+    return attributedStr;
+}
+
+/**
+ *  单纯改变段落的行间距
+ *
+ *  @param totalString 需要更改的字符串
+ *  @param lineSpace   行间距
+ *
+ *  @return 生成的富文本
+ */
++ (NSMutableAttributedString *)ls_changeLineSpaceWithTotalString:(NSString *)totalString LineSpace:(CGFloat)lineSpace {
+    
+    NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString:totalString];
+    
+    NSMutableParagraphStyle * paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragraphStyle setLineSpacing:lineSpace];
+    
+    [attributedStr addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [totalString length])];
+    
+    return attributedStr;
+}
+
+/**
+ *  同时更改行间距和字间距
+ *
+ *  @param totalString 需要改变的字符串
+ *  @param lineSpace   行间距
+ *  @param textSpace   字间距
+ *
+ *  @return 生成的富文本
+ */
++ (NSMutableAttributedString *)ls_changeLineAndTextSpaceWithTotalString:(NSString *)totalString LineSpace:(CGFloat)lineSpace textSpace:(CGFloat)textSpace {
+    
+    NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString:totalString];
+    
+    NSMutableParagraphStyle * paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragraphStyle setLineSpacing:lineSpace];
+    
+    [attributedStr addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [totalString length])];
+    
+    long number = textSpace;
+    CFNumberRef num = CFNumberCreate(kCFAllocatorDefault,kCFNumberSInt8Type,&number);
+    [attributedStr addAttribute:(id)kCTKernAttributeName value:(__bridge id)num range:NSMakeRange(0,[attributedStr length])];
+    CFRelease(num);
+    
+    return attributedStr;
+}
+
+/**
+ *  改变某些文字的颜色 并单独设置其字体
+ *
+ *  @param font        设置的字体
+ *  @param color       颜色
+ *  @param totalString 总的字符串
+ *  @param subArray    想要变色的字符数组
+ *
+ *  @return 生成的富文本
+ */
++ (NSMutableAttributedString *)ls_changeFontAndColor:(UIFont *)font Color:(UIColor *)color TotalString:(NSString *)totalString SubStringArray:(NSArray *)subArray {
+    
+    NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString:totalString];
+    
+    for (NSString *rangeStr in subArray) {
+        
+        NSRange range = [totalString rangeOfString:rangeStr options:NSBackwardsSearch];
+        
+        [attributedStr addAttribute:NSForegroundColorAttributeName value:color range:range];
+        [attributedStr addAttribute:NSFontAttributeName value:font range:range];
+    }
+    
+    return attributedStr;
+}
+
+/**
+ *  为某些文字改为链接形式
+ *
+ *  @param totalString 总的字符串
+ *  @param subArray    需要改变颜色的文字数组(要是有相同的 只取第一个)
+ *
+ *  @return 生成的富文本
+ */
++ (NSMutableAttributedString *)ls_addLinkWithTotalString:(NSString *)totalString SubStringArray:(NSArray *)subArray {
+    
+    NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc] initWithString:totalString];
+    
+    for (NSString *rangeStr in subArray) {
+        
+        NSRange range = [totalString rangeOfString:rangeStr options:NSBackwardsSearch];
+        [attributedStr addAttribute:NSLinkAttributeName value:totalString range:range];
+    }
+    
+    return attributedStr;
+}
+
+#pragma mark - 获取某个子字符串在某个总字符串中位置数组
+/**
+ *  获取某个字符串中子字符串的位置数组
+ *
+ *  @param totalString 总的字符串
+ *  @param subString   子字符串
+ *
+ *  @return 位置数组
+ */
++ (NSMutableArray *)ls_getRangeWithTotalString:(NSString *)totalString SubString:(NSString *)subString {
+    
+    NSMutableArray *arrayRanges = [NSMutableArray array];
+    
+    if (subString == nil && [subString isEqualToString:@""]) {
+        return nil;
+    }
+    
+    NSRange rang = [totalString rangeOfString:subString];
+    
+    if (rang.location != NSNotFound && rang.length != 0) {
+        
+        [arrayRanges addObject:[NSNumber valueWithRange:rang]];
+        
+        NSRange      rang1 = {0,0};
+        NSInteger location = 0;
+        NSInteger   length = 0;
+        
+        for (int i = 0;; i++) {
+            
+            if (0 == i) {
+                
+                location = rang.location + rang.length;
+                length = totalString.length - rang.location - rang.length;
+                rang1 = NSMakeRange(location, length);
+            } else {
+                
+                location = rang1.location + rang1.length;
+                length = totalString.length - rang1.location - rang1.length;
+                rang1 = NSMakeRange(location, length);
+            }
+            
+            rang1 = [totalString rangeOfString:subString options:NSCaseInsensitiveSearch range:rang1];
+            
+            if (rang1.location == NSNotFound && rang1.length == 0) {
+                
+                break;
+            } else {
+                
+                [arrayRanges addObject:[NSNumber valueWithRange:rang1]];
+            }
+        }
+        
+        return arrayRanges;
+    }
+    
+    return nil;
+}
+
+#pragma mark - 选择相册相关API
+
+/**
+ *  获取相册的图片
+ *
+ *  @param result 获取到的图片
+ *  @param error  失败信息
+ */
++ (void)getSavedPhotoList:(void (^)(NSArray *))result error:(void (^)(NSError *))error
+{
+    NSMutableArray *savedPhotoList = [NSMutableArray array];
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= __IPHONE_9_0) {
+        
+        NSMutableArray* assetarray = [NSMutableArray array];
+        PHFetchResult* collections = [PHAssetCollection fetchMomentsWithOptions:nil];
+        
+        for (PHAssetCollection* collection in collections) {
+            PHFetchResult* assets = [PHAsset fetchAssetsInAssetCollection:collection options:nil];
+            for (PHAsset* asset in assets) {
+                if (asset.mediaType ==  PHAssetMediaTypeImage) {
+                    [assetarray addObject:asset];
+                }
+            }
+        }
+        
+        [assetarray sortUsingComparator:^NSComparisonResult(PHAsset* obj1, PHAsset* obj2) {
+            return [obj2.creationDate compare:obj1.creationDate];
+        }];
+        
+        if (result) {
+            result(assetarray);
+        }
+        return;
+        
+    }
+    
+    ALAssetsLibrary *assetsLibrary = [[ALAssetsLibrary alloc] init];
+    
+    void (^assetGroupEnumerator)(ALAssetsGroup *, BOOL *) = ^(ALAssetsGroup *group, BOOL *stop) {
+        
+        
+        if ([[group valueForProperty:@"ALAssetsGroupPropertyType"] intValue] == ALAssetsGroupSavedPhotos) {
+            
+            [group setAssetsFilter: [ALAssetsFilter allPhotos]];
+            
+            [group enumerateAssetsUsingBlock:^(ALAsset *alPhoto, NSUInteger index, BOOL *stop) {
+                @autoreleasepool {
+                    
+                    if(alPhoto == nil) {
+                        
+                        NSArray * tempArray = [savedPhotoList copy];
+                        [savedPhotoList removeAllObjects];
+                        [savedPhotoList addObjectsFromArray: [[tempArray reverseObjectEnumerator] allObjects]];
+                        
+                        
+                        result([savedPhotoList mutableCopy]);
+                        
+                        return;
+                    }
+                    
+                    [savedPhotoList addObject:alPhoto];
+                }
+            }];
+        }
+    };
+    
+    void (^assetGroupEnumberatorFailure)(NSError *) = ^(NSError *err) {
+        
+        NSLog(@"Asset read Error : %@", [err description]);
+    };
+    
+    [assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:assetGroupEnumerator failureBlock:assetGroupEnumberatorFailure];
+}
+
+/**
+ *  获取asset中的image
+ *
+ *  @param asset       PSAsset
+ *  @param size        尺寸
+ *  @param completion  完成block
+ *  @param synchronous 是否异步
+ */
++ (void)generaImaeWithAsset:(PHAsset *)asset size:(CGSize)size completion:(void (^)(UIImage *))completion synchronous:(BOOL)synchronous {
+    
+    PHImageRequestOptions* options = [[PHImageRequestOptions alloc]init];
+    options.synchronous = synchronous;
+    [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:size contentMode:PHImageContentModeAspectFit options:options resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+        if (completion) {
+            completion(result);
+        }
+    }];
+    
+}
+
+/**
+ *  获取Asset中的size
+ *
+ *  @param asset Asset
+ *
+ *  @return 得到的size
+ */
++ (CGSize)getSizeFromAsset:(id)asset {
+    
+    CGSize size;
+    
+    if ([asset isKindOfClass:[PHAsset class]]) {
+        
+        PHAsset* pa = (PHAsset*)asset;
+        size = CGSizeMake(pa.pixelWidth, pa.pixelHeight);
+    } else {
+        
+        ALAssetRepresentation * representation = [asset defaultRepresentation];
+        size = [representation dimensions];
+    }
+    
+    return size;
+}
+
+/**
+ *  从asset中截取一定尺寸的图片
+ *
+ *  @param asset asset
+ *  @param size  需要的尺寸
+ *
+ *  @return 得到的image
+ */
++ (UIImage *)getThumImageFromAsset:(id)asset withSize:(CGSize)size {
+    
+    __block UIImage *image;
+    
+    if ([asset isKindOfClass:[PHAsset class]]) {
+        
+        PHAsset* pa = (PHAsset*)asset;
+        
+        [self generaImaeWithAsset:pa size:size completion:^(UIImage *result) {
+            
+            image = result;
+        } synchronous:YES];
+        
+    } else {
+        
+        if ([[[UIDevice alloc] systemVersion] floatValue] >= 9.0) {
+            
+            image = [UIImage imageWithCGImage:[asset aspectRatioThumbnail]];;
+        } else {
+            
+            image = [UIImage imageWithCGImage:[asset thumbnail]];;
+        }
+    }
+    
+    return image;
+    
+}
 
 @end

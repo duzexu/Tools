@@ -52,6 +52,7 @@ static CGFloat const kDefaultCompressQuality = 0.85;
         if (ratio > quality) {
             ratio -= 0.1;
             result = [self scale:ratio];
+            data = UIImageJPEGRepresentation(result, quality);
         }else{
             quality -= 0.1;
             data = UIImageJPEGRepresentation(result, quality);
