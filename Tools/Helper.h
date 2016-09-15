@@ -106,3 +106,5 @@ fprintf(stderr, "-------\n");
  */
 #define NSStringFromInt(intValue) [NSString stringWithFormat:@"%d",intValue]
 #define NSStringFromFloat(floatValue) [NSString stringWithFormat:@"%f",floatValue]
+
+#define Keypath(keypath) (strchr(#keypath, '.') + 1)
