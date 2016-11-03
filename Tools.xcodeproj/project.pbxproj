@@ -119,6 +119,7 @@
 		6DFE4B781B4E1CC300A009CE /* IDNLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE4B771B4E1CC300A009CE /* IDNLoopView.m */; };
 		BE1C4C4D1CA003E5004BC9C2 /* UIImage+Compress.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C4C4C1CA003E5004BC9C2 /* UIImage+Compress.m */; };
 		BE3F75881CA0EA1200BF4B30 /* HJCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3F75871CA0EA1200BF4B30 /* HJCornerRadius.m */; };
+		BE4FDC2C1DB088F300639470 /* UIApplication+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4FDC2B1DB088F300639470 /* UIApplication+Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -348,6 +349,8 @@
 		BE1C4C4C1CA003E5004BC9C2 /* UIImage+Compress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Compress.m"; sourceTree = "<group>"; };
 		BE3F75861CA0EA1200BF4B30 /* HJCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCornerRadius.h; sourceTree = "<group>"; };
 		BE3F75871CA0EA1200BF4B30 /* HJCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCornerRadius.m; sourceTree = "<group>"; };
+		BE4FDC2A1DB088F300639470 /* UIApplication+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Utils.h"; sourceTree = "<group>"; };
+		BE4FDC2B1DB088F300639470 /* UIApplication+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -525,6 +528,8 @@
 				0885F4A01733AA3200246C02 /* ADTools.h */,
 				0885F4A11733AA3200246C02 /* ADTools.m */,
 				08ABB35D1749DD5E00DC543E /* Helper.h */,
+				BE4FDC2A1DB088F300639470 /* UIApplication+Utils.h */,
+				BE4FDC2B1DB088F300639470 /* UIApplication+Utils.m */,
 				6DB7BAC81BA9A184003C4F6E /* UIControl+TapLimit.h */,
 				6DB7BAC91BA9A184003C4F6E /* UIControl+TapLimit.m */,
 				08D3A7B6173758FD00220430 /* UIImage+Auto_fit.h */,
@@ -1112,6 +1117,7 @@
 				086D31B01959243B0003F60B /* SideMenu.m in Sources */,
 				0899C29918ACA94B003745FE /* UIView+RoundedCorners.m in Sources */,
 				08D3A86C1737B78D00220430 /* STScratchView.m in Sources */,
+				BE4FDC2C1DB088F300639470 /* UIApplication+Utils.m in Sources */,
 				08D3A86D1737B78D00220430 /* ViewController.m in Sources */,
 				089E0608186D7D51009743F7 /* UIView+Utils.m in Sources */,
 				088604E6182B8B3F005E5755 /* HPTextViewInternal.m in Sources */,

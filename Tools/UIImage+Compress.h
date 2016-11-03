@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImage (Compress)
+
 - (NSData *)compressToTargetSize:(NSUInteger)targetSize;
+
 @end
