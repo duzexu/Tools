@@ -119,7 +119,9 @@
 		6DFE4B781B4E1CC300A009CE /* IDNLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFE4B771B4E1CC300A009CE /* IDNLoopView.m */; };
 		BE1C4C4D1CA003E5004BC9C2 /* UIImage+Compress.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1C4C4C1CA003E5004BC9C2 /* UIImage+Compress.m */; };
 		BE3F75881CA0EA1200BF4B30 /* HJCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3F75871CA0EA1200BF4B30 /* HJCornerRadius.m */; };
+		BE41790F1DE2F5020090F03F /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = BE41790E1DE2F5020090F03F /* Foundation+Log.m */; };
 		BE4FDC2C1DB088F300639470 /* UIApplication+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4FDC2B1DB088F300639470 /* UIApplication+Utils.m */; };
+		BE5E79841E2C9F9900046079 /* ADProtocolDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5E79831E2C9F9900046079 /* ADProtocolDispatcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -349,8 +351,11 @@
 		BE1C4C4C1CA003E5004BC9C2 /* UIImage+Compress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Compress.m"; sourceTree = "<group>"; };
 		BE3F75861CA0EA1200BF4B30 /* HJCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCornerRadius.h; sourceTree = "<group>"; };
 		BE3F75871CA0EA1200BF4B30 /* HJCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCornerRadius.m; sourceTree = "<group>"; };
+		BE41790E1DE2F5020090F03F /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		BE4FDC2A1DB088F300639470 /* UIApplication+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Utils.h"; sourceTree = "<group>"; };
 		BE4FDC2B1DB088F300639470 /* UIApplication+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Utils.m"; sourceTree = "<group>"; };
+		BE5E79821E2C9F9900046079 /* ADProtocolDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADProtocolDispatcher.h; sourceTree = "<group>"; };
+		BE5E79831E2C9F9900046079 /* ADProtocolDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADProtocolDispatcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -528,6 +533,7 @@
 				0885F4A01733AA3200246C02 /* ADTools.h */,
 				0885F4A11733AA3200246C02 /* ADTools.m */,
 				08ABB35D1749DD5E00DC543E /* Helper.h */,
+				BE41790E1DE2F5020090F03F /* Foundation+Log.m */,
 				BE4FDC2A1DB088F300639470 /* UIApplication+Utils.h */,
 				BE4FDC2B1DB088F300639470 /* UIApplication+Utils.m */,
 				6DB7BAC81BA9A184003C4F6E /* UIControl+TapLimit.h */,
@@ -556,6 +562,8 @@
 				0899C2A318ACC958003745FE /* UIImage+ProportionalFill.m */,
 				0899C2A418ACC958003745FE /* UIImage+Tint.h */,
 				0899C2A518ACC958003745FE /* UIImage+Tint.m */,
+				BE5E79821E2C9F9900046079 /* ADProtocolDispatcher.h */,
+				BE5E79831E2C9F9900046079 /* ADProtocolDispatcher.m */,
 				08F9F06318AE07E300DF5815 /* XMLReader.h */,
 				08F9F06418AE07E300DF5815 /* XMLReader.m */,
 				08295BA51966AAF100A84280 /* UIViewController+childViewController.m */,
@@ -1106,6 +1114,7 @@
 				08D3A8421737B77F00220430 /* SliderControl.m in Sources */,
 				08D3A8621737B78D00220430 /* AppDelegate.m in Sources */,
 				08D3A8661737B78D00220430 /* ImageMaskView.mm in Sources */,
+				BE41790F1DE2F5020090F03F /* Foundation+Log.m in Sources */,
 				08D3A8671737B78D00220430 /* main.m in Sources */,
 				BE3F75881CA0EA1200BF4B30 /* HJCornerRadius.m in Sources */,
 				0899C29D18ACB13C003745FE /* NSDate+Escort.m in Sources */,
@@ -1144,6 +1153,7 @@
 				080A9DFC178AAC1600874A8F /* iVersion.m in Sources */,
 				084EBB4D184DD1BA00FAC37B /* MSKeyboardScrollView.m in Sources */,
 				BE1C4C4D1CA003E5004BC9C2 /* UIImage+Compress.m in Sources */,
+				BE5E79841E2C9F9900046079 /* ADProtocolDispatcher.m in Sources */,
 				0851D36E18F3E72F005EA6BD /* STDb.m in Sources */,
 				088604E5182B8B3F005E5755 /* HPGrowingTextView.m in Sources */,
 				08BAC9FA1794F4810016CCFD /* ChineseToPinyin.m in Sources */,
