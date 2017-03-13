@@ -10,6 +10,9 @@
 #define LxDBAnything_h
 
 #import <UIKit/UIKit.h>
+#import <objc/runtime.h>
+
+#pragma mark ------------------------------- interface -------------------------------
 
 #if TARGET_OS_IPHONE
 
@@ -27,18 +30,34 @@
 
 #endif
 
-#define LxBox(var) __lx_box(@encode(__typeof__((var))), (var))
-#define LxBoxToString(var)  [LxBox(var) description]
+#define stringify               __STRING
+#define LxType(var)             __typeof__((var))
+#define LxBox(var)              __lx_box(@encode(LxType(var)), (var))
+#define LxBoxToString(var)      [LxBox(var) description]
+#define LxTypeStringOfVar(var)  __lx_type_string_for_var(@encode(LxType(var)), (var))
+
+static NSDictionary * LxDictionaryFromObject(NSObject * object);
+static NSString * LxJsonFromObject(NSObject * object);
+static NSString * LxXmlFromObject(NSObject * object);
+static NSString * LxViewHierarchyDescription(UIView * view);
 
 #ifdef DEBUG
-    #define LxPrintf(fmt, ...)  printf("🎈%s + %d📍 %s\n", __PRETTY_FUNCTION__, __LINE__, [[NSString stringWithFormat:fmt, ##__VA_ARGS__]UTF8String])
+    #define LxPrintf(fmt, ...)  printf("📍%s + %d🎈 %s\n", __PRETTY_FUNCTION__, __LINE__, [[NSString stringWithFormat:fmt, ##__VA_ARGS__]UTF8String])
     #define LxDBAnyVar(var)     LxPrintf(@"%s = %@", #var, LxBox(var))
-    #define LxPrintAnything(x)   printf("🎈%s + %d📍 %s\n", __PRETTY_FUNCTION__, __LINE__, #x)
+    #define LxPrintAnything(x)  printf("📍%s + %d🎈 %s\n", __PRETTY_FUNCTION__, __LINE__, #x)
+    #define LxDBObjectAsJson(obj)   printf("📍%s + %d🎈 %s\n", __PRETTY_FUNCTION__, __LINE__, __lx_json_db_object_string(obj).UTF8String)
+    #define LxDBObjectAsXml(obj)    printf("📍%s + %d🎈 %s\n", __PRETTY_FUNCTION__, __LINE__, __lx_xml_db_object_string(obj).UTF8String)
+    #define LxDBViewHierarchy(view) printf("📍%s + %d🎈%s =\n%s\n", __PRETTY_FUNCTION__, __LINE__, #view, LxViewHierarchyDescription(view).UTF8String)
 #else
     #define LxPrintf(fmt, ...)
     #define LxDBAnyVar(any)
     #define LxPrintAnything(x)
+    #define LxDBObjectAsJson(obj)
+    #define LxDBObjectAsXml(obj)
+    #define LxDBViewHierarchy(view)
 #endif
+
+#pragma mark ------------------------------- implementation -------------------------------
 
 static inline id __lx_box(const char * type, ...)
 {
@@ -163,6 +182,335 @@ static inline id __lx_box(const char * type, ...)
     va_end(variable_param_list);
     
     return object;
+}
+
+static inline char __lx_first_char_for_string(const char * string)
+{
+    if (strlen(string) > 0) {
+        return string[0];
+    }
+    else {
+        return '\0';
+    }
+}
+
+static inline char __lx_last_char_for_string(const char * string)
+{
+    if (strlen(string) > 0) {
+        return string[strlen(string) - 1];
+    }
+    else {
+        return '\0';
+    }
+}
+
+static inline NSString * __lx_type_string_for_var(const char * type, ...)
+{
+    va_list variable_param_list;
+    va_start(variable_param_list, type);
+    
+    NSString * typeString = nil;
+    
+    if (strcmp(type, @encode(id)) == 0) {
+        
+        id param = va_arg(variable_param_list, id);
+        typeString = NSStringFromClass([param class]);
+    }
+    else if (strcmp(type, @encode(CGPoint)) == 0) {
+        
+        typeString = @stringify(CGPoint);
+    }
+    else if (strcmp(type, @encode(CGSize)) == 0) {
+        
+        typeString = @stringify(CGSize);
+    }
+    else if (strcmp(type, @encode(CGVector)) == 0) {
+
+        typeString = @stringify(CGVector);
+    }
+    else if (strcmp(type, @encode(CGRect)) == 0) {
+
+        typeString = @stringify(CGRect);
+    }
+    else if (strcmp(type, @encode(NSRange)) == 0) {
+
+        typeString = @stringify(NSRange);
+    }
+    else if (strcmp(type, @encode(CFRange)) == 0) {
+
+        typeString = @stringify(CFRange);
+    }
+    else if (strcmp(type, @encode(CGAffineTransform)) == 0) {
+
+        typeString = @stringify(CGAffineTransform);
+    }
+    else if (strcmp(type, @encode(CATransform3D)) == 0) {
+
+        typeString = @stringify(CATransform3D);
+    }
+    else if (strcmp(type, @encode(SEL)) == 0) {
+
+        typeString = @stringify(SEL);
+    }
+    else if (strcmp(type, @encode(Class)) == 0) {
+
+        typeString = @stringify(Class);
+    }
+    else if (strcmp(type, @encode(LxOffset)) == 0) {
+
+        typeString = @stringify(LxOffset);
+    }
+    else if (strcmp(type, @encode(LxEdgeInsets)) == 0) {
+
+        typeString = @stringify(LxEdgeInsets);
+    }
+    else if (strcmp(type, @encode(short)) == 0) {
+       
+        typeString = @stringify(short);
+    }
+    else if (strcmp(type, @encode(int)) == 0) {
+     
+        typeString = @stringify(int);
+    }
+    else if (strcmp(type, @encode(long)) == 0) {
+      
+        typeString = @stringify(long);
+    }
+    else if (strcmp(type, @encode(long long)) == 0) {
+     
+        typeString = @stringify(long long);
+    }
+    else if (strcmp(type, @encode(float)) == 0) {
+ 
+        typeString = @stringify(float);
+    }
+    else if (strcmp(type, @encode(double)) == 0) {
+     
+        typeString = @stringify(double);
+    }
+    else if (strcmp(type, @encode(long double)) == 0) {
+        
+        typeString = @stringify(long double);
+    }
+    else if (strcmp(type, @encode(BOOL)) == 0) {
+
+        typeString = @stringify(BOOL);
+    }
+    else if (strcmp(type, @encode(bool)) == 0) {
+
+        typeString = @stringify(bool);
+    }
+    else if (strcmp(type, @encode(char)) == 0) {
+
+        typeString = @stringify(char);
+    }
+    else if (strcmp(type, @encode(unsigned short)) == 0) {
+
+        typeString = @stringify(unsigned short);
+    }
+    else if (strcmp(type, @encode(unsigned int)) == 0) {
+
+        typeString = @stringify(unsigned int);
+    }
+    else if (strcmp(type, @encode(unsigned long)) == 0) {
+ 
+        typeString = @stringify(unsigned long);
+    }
+    else if (strcmp(type, @encode(unsigned long long)) == 0) {
+
+        typeString = @stringify(unsigned long long);
+    }
+    else if (strcmp(type, @encode(unsigned char)) == 0) {
+
+        typeString = @stringify(unsigned char);
+    }
+    else if (strcmp(type, @encode(char *)) == 0) {
+        
+        typeString = @stringify(char *);
+    }
+    else if (strcmp(type, @encode(void)) == 0) {
+        
+        typeString = @stringify(void);
+    }
+    else if (strcmp(type, @encode(void *)) == 0) {
+        
+        typeString = @stringify(void *);
+    }
+    else if (__lx_first_char_for_string(type) == '[' && __lx_last_char_for_string(type) == ']') {
+    
+        typeString = @stringify(array);
+    }
+    else if (__lx_first_char_for_string(type) == '{' && __lx_last_char_for_string(type) == '}') {
+        
+        typeString = @stringify(struct);
+    }
+    else if (__lx_first_char_for_string(type) == '(' && __lx_last_char_for_string(type) == ')') {
+        
+        typeString = @stringify(union);
+    }
+    else if (__lx_first_char_for_string(type) == '^') {
+        
+        typeString = @stringify(pointer);
+    }
+    else if (__lx_first_char_for_string(type) == 'b') {
+        
+        typeString = @stringify(bit_field);
+    }
+    else if (strcmp(type, "?") == 0) {
+        
+        typeString = @stringify(unknown_type);
+    }
+    else {
+        typeString = @"LxDBAnything：Can not distinguish temporarily!😂";
+    }
+    
+    va_end(variable_param_list);
+    
+    return typeString;
+}
+
+static NSObject * __lx_stringify_object_value(NSObject * object)
+{
+    if ([object isKindOfClass:[NSArray class]]) {
+        
+        NSMutableArray * arrayObject = [NSMutableArray array];
+        
+        for (id obj in (NSArray *)object) {
+            [arrayObject addObject:__lx_stringify_object_value(obj)];
+        }
+        
+        return [NSArray arrayWithArray:arrayObject];
+    }
+    else if ([object isKindOfClass:[NSDictionary class]]) {
+        
+        NSMutableDictionary * dictionaryObject = [NSMutableDictionary dictionary];
+        
+        [(NSDictionary *)object enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            
+            [dictionaryObject setValue:__lx_stringify_object_value(obj) forKey:LxBoxToString(key)];
+        }];
+        
+        return [NSDictionary dictionaryWithDictionary:dictionaryObject];
+    }
+    else if ([object isKindOfClass:[NSSet class]]) {
+        
+        NSMutableArray * arrayObject = [NSMutableArray array];
+        
+        for (id obj in (NSSet *)object) {
+            [arrayObject addObject:__lx_stringify_object_value(obj)];
+        }
+        
+        return [NSArray arrayWithArray:arrayObject];
+    }
+    else if ([object isKindOfClass:[NSOrderedSet class]]) {
+        
+        NSMutableArray * arrayObject = [NSMutableArray array];
+        
+        for (id obj in (NSOrderedSet *)object) {
+            
+            [arrayObject addObject:__lx_stringify_object_value(obj)];
+        }
+        
+        return [NSArray arrayWithArray:arrayObject];
+    }
+    else {
+        
+        return LxBoxToString(object);
+    }
+}
+
+static NSDictionary * LxDictionaryFromObject(NSObject * object)
+{
+    NSCAssert([object isKindOfClass:[NSObject class]], ([NSString stringWithFormat:@"LxDBAnything：%@ type error!", object]));
+    
+    NSMutableDictionary * objectDictionary = [NSMutableDictionary dictionary];
+    
+    unsigned int outCount = 0;
+    
+    objc_property_t * propertyList = class_copyPropertyList([object class], &outCount);
+    
+    for (int i = 0; i < outCount; i++) {
+        
+        objc_property_t property = propertyList[i];
+        
+        NSString * propertyName = [NSString stringWithUTF8String:property_getName(property)];
+        
+        if ([object respondsToSelector:NSSelectorFromString(propertyName)]) {
+            
+            @try {
+                NSObject * propertyValue = [object valueForKey:propertyName];
+                [objectDictionary setValue:__lx_stringify_object_value(propertyValue) forKey:propertyName];
+            }
+            @catch (NSException *exception) {
+                LxDBAnyVar(exception);  //
+                [objectDictionary setValue:nil forKey:propertyName];
+            }
+        }
+    }
+    free(propertyList);
+    
+    return [NSDictionary dictionaryWithDictionary:objectDictionary];
+}
+
+static NSString * __lx_json_db_object_string(NSObject * object)
+{
+    return [NSString stringWithFormat:@"%@ = %@", object.description, LxJsonFromObject(object)];
+}
+
+static NSString * __lx_xml_db_object_string(NSObject * object)
+{
+    return [NSString stringWithFormat:@"%@ = %@", object.description, LxXmlFromObject(object)];
+}
+
+static NSString * LxJsonFromObject(NSObject * object)
+{
+    NSError * error = nil;
+    
+    NSDictionary * objectDictionary = LxDictionaryFromObject(object);
+    NSData * jsonData = [NSJSONSerialization dataWithJSONObject:objectDictionary options:NSJSONWritingPrettyPrinted error:&error];
+    NSString * jsonString = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+    return jsonString;
+}
+
+static NSString * LxXmlFromObject(NSObject * object)
+{
+    NSError * error = nil;
+    
+    NSDictionary * objectDictionary = LxDictionaryFromObject(object);
+    NSData * xmlData = [NSPropertyListSerialization dataWithPropertyList:objectDictionary format:NSPropertyListXMLFormat_v1_0 options:0 error:&error];
+    NSString * xmlString = [[NSString alloc]initWithData:xmlData encoding:NSUTF8StringEncoding];
+    return xmlString;
+}
+
+static NSString * __lx_view_hierarchy_description(UIView * view, NSInteger depth)
+{
+    static NSString * unitIndentSpaceString = @"    ";
+    
+    NSString * indentSpaceString = @" ";
+    for (int i = 0; i < depth; i++) {
+        indentSpaceString = [indentSpaceString stringByAppendingString:unitIndentSpaceString];
+    }
+    
+    NSString * viewHierarchyDescription = [NSString stringWithFormat:@"%zi＃%@%@\n", depth, indentSpaceString, view];
+    
+    depth++;
+    
+    for (UIView * subview in view.subviews) {
+        
+        viewHierarchyDescription = [viewHierarchyDescription stringByAppendingString:__lx_view_hierarchy_description(subview, depth)];
+    }
+    
+    return viewHierarchyDescription;
+}
+
+static NSString * LxViewHierarchyDescription(UIView * view)
+{
+    NSCAssert([view isKindOfClass:[UIView class]], @"");
+    
+    NSString * viewHierarchyDescription = @"";
+    NSInteger depth = 0;
+    viewHierarchyDescription = [viewHierarchyDescription stringByAppendingString:__lx_view_hierarchy_description(view, depth)];
+    return viewHierarchyDescription;
 }
 
 #endif /* LxDBAnything_h */

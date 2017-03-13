@@ -340,7 +340,6 @@
 		6D5E0F741B8D5E8900B78C5D /* UILabel+BezierAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+BezierAnimation.m"; sourceTree = "<group>"; };
 		6D5E0F751B8D5E8900B78C5D /* WSBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSBezier.h; sourceTree = "<group>"; };
 		6D5E0F761B8D5E8900B78C5D /* WSBezier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSBezier.m; sourceTree = "<group>"; };
-		6D6EC0EF1BE370EA003674D1 /* LxDBAnything.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxDBAnything.h; sourceTree = "<group>"; };
 		6DB7BAC81BA9A184003C4F6E /* UIControl+TapLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+TapLimit.h"; sourceTree = "<group>"; };
 		6DB7BAC91BA9A184003C4F6E /* UIControl+TapLimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+TapLimit.m"; sourceTree = "<group>"; };
 		6DC359131B5783B00015A680 /* LaunchPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchPlayerView.h; sourceTree = "<group>"; };
@@ -356,6 +355,7 @@
 		BE4FDC2B1DB088F300639470 /* UIApplication+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Utils.m"; sourceTree = "<group>"; };
 		BE5E79821E2C9F9900046079 /* ADProtocolDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADProtocolDispatcher.h; sourceTree = "<group>"; };
 		BE5E79831E2C9F9900046079 /* ADProtocolDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADProtocolDispatcher.m; sourceTree = "<group>"; };
+		BEDAE1B61E7648F200757BDC /* LxDBAnything.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxDBAnything.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -521,7 +521,7 @@
 			children = (
 				0885F4921733AA1800246C02 /* AppDelegate.h */,
 				0885F4931733AA1800246C02 /* AppDelegate.m */,
-				6D6EC0EF1BE370EA003674D1 /* LxDBAnything.h */,
+				BEDAE1B61E7648F200757BDC /* LxDBAnything.h */,
 				6DC359131B5783B00015A680 /* LaunchPlayerView.h */,
 				6DC359141B5783B10015A680 /* LaunchPlayerView.m */,
 				6D5E0F6E1B8C531E00B78C5D /* ADRadiusView.h */,
