@@ -745,4 +745,124 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector)  {  
     
 }
 
+// 汉字转拼音
++ (NSString *)transform:(NSString *)chinese
+{
+    //将NSString装换成NSMutableString
+    NSMutableString *pinyin = [chinese mutableCopy];
+    //将汉字转换为拼音(带音标)
+    CFStringTransform((__bridge CFMutableStringRef)pinyin, NULL, kCFStringTransformMandarinLatin, NO);
+    NSLog(@"%@", pinyin);
+    //去掉拼音的音标
+    CFStringTransform((__bridge CFMutableStringRef)pinyin, NULL, kCFStringTransformStripCombiningMarks, NO);
+    NSLog(@"%@", pinyin);
+    //返回最近结果
+    return pinyin;
+}
+
+// 数字转中文格式
++(NSString *)translation:(NSString *)arebic {
+    NSString *str = arebic;
+    NSArray *arabic_numerals = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"0"];
+    NSArray *chinese_numerals = @[@"一",@"二",@"三",@"四",@"五",@"六",@"七",@"八",@"九",@"零"];
+    NSArray *digits = @[@"个",@"十",@"百",@"千",@"万",@"十",@"百",@"千",@"亿",@"十",@"百",@"千",@"兆"];
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:chinese_numerals forKeys:arabic_numerals];
+    
+    NSMutableArray *sums = [NSMutableArray array];
+    for (int i = 0; i < str.length; i ++) {
+        NSString *substr = [str substringWithRange:NSMakeRange(i, 1)];
+        NSString *a = [dictionary objectForKey:substr];
+        NSString *b = digits[str.length -i-1];
+        NSString *sum = [a stringByAppendingString:b];
+        if ([a isEqualToString:chinese_numerals[9]])
+        {
+            if([b isEqualToString:digits[4]] || [b isEqualToString:digits[8]])
+            {
+                sum = b;
+                if ([[sums lastObject] isEqualToString:chinese_numerals[9]])
+                {
+                    [sums removeLastObject];
+                }
+            }else
+            {
+                sum = chinese_numerals[9];
+            }
+            
+            if ([[sums lastObject] isEqualToString:sum])
+            {
+                continue;
+            }
+        }
+        
+        [sums addObject:sum];
+    }
+    
+    NSString *sumStr = [sums componentsJoinedByString:@""];
+    NSString *chinese = [sumStr substringToIndex:sumStr.length-1];
+    NSLog(@"%@",str);
+    NSLog(@"%@",chinese);
+    return chinese;
+}
+
+//文件大小
+- (long long)fileSizeAtPath:(NSString *)path
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    if ([fileManager fileExistsAtPath:path])
+    {
+        long long size = [fileManager attributesOfItemAtPath:path error:nil].fileSize;
+        return size;
+    }
+    
+    return 0;
+}
+
+//文件夹大小
+- (long long)folderSizeAtPath:(NSString *)path
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    long long folderSize = 0;
+    if ([fileManager fileExistsAtPath:path])
+    {
+        NSArray *childerFiles = [fileManager subpathsAtPath:path];
+        for (NSString *fileName in childerFiles)
+        {
+            NSString *fileAbsolutePath = [path stringByAppendingPathComponent:fileName];
+            if ([fileManager fileExistsAtPath:fileAbsolutePath])
+            {
+                long long size = [fileManager attributesOfItemAtPath:fileAbsolutePath error:nil].fileSize;
+                folderSize += size;
+            }
+        }
+    }
+    
+    return folderSize;
+}
+
+//计算字符串字符长度，一个汉字算两个字符
+-(NSUInteger) unicodeLengthOfString: (NSString *) text {
+    NSUInteger asciiLength = 0;
+    for (NSUInteger i = 0; i < text.length; i++)
+         {
+             unichar uc = [text characterAtIndex: i];
+             asciiLength += isascii(uc) ? 1 : 2;
+         }
+         return asciiLength;
+}
+
+//获取手机安装的应用
+- (void)installedApp {
+    Class c =NSClassFromString(@"LSApplicationWorkspace");
+    id s = [(id)c performSelector:NSSelectorFromString(@"defaultWorkspace")];
+    NSArray *array = [s performSelector:NSSelectorFromString(@"allInstalledApplications")];
+    for (id item in array)
+    {
+        NSLog(@"%@",[item performSelector:NSSelectorFromString(@"applicationIdentifier")]);
+        //NSLog(@"%@",[item performSelector:NSSelectorFromString(@"bundleIdentifier")]);
+        NSLog(@"%@",[item performSelector:NSSelectorFromString(@"bundleVersion")]);
+        NSLog(@"%@",[item performSelector:NSSelectorFromString(@"shortVersionString")]);
+    }
+}
+
 @end

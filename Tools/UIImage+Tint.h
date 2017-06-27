@@ -12,4 +12,7 @@
 - (UIImage *)imageTintedWithColor:(UIColor *)color;
 - (UIImage *)imageTintedWithColor:(UIColor *)color fraction:(CGFloat)fraction;
 
+// 获取图片某像素点的颜色
+- (UIColor *)colorAtPixel:(CGPoint)point;
+
 @end

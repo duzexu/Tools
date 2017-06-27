@@ -212,3 +212,9 @@
 - (void)crossfadeWithDuration:(NSTimeInterval)duration completion:(void (^)(void))completion;
 
 @end
+
+@interface UIView (ExtendTouchRect)
+
+@property (nonatomic, assign) UIEdgeInsets touchExtendInset;
+
+@end
