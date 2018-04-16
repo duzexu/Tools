@@ -111,6 +111,7 @@
 		08DCA8AB17AA48DD00E3F528 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DCA8AA17AA48DD00E3F528 /* UIImage+ImageEffects.m */; };
 		08DCA96B17AA5A7E00E3F528 /* JScrollView+PageControl+AutoScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DCA96A17AA5A7E00E3F528 /* JScrollView+PageControl+AutoScroll.m */; };
 		08F9F06518AE07E300DF5815 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F9F06418AE07E300DF5815 /* XMLReader.m */; };
+		30770A692084E1EC00B1E6C4 /* UIButton+LCAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 30770A682084E1EC00B1E6C4 /* UIButton+LCAlignment.m */; };
 		6D5E0F6F1B8C531E00B78C5D /* ADRadiusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5E0F6D1B8C531E00B78C5D /* ADRadiusView.m */; };
 		6D5E0F771B8D5E8900B78C5D /* UILabel+BezierAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5E0F741B8D5E8900B78C5D /* UILabel+BezierAnimation.m */; };
 		6D5E0F781B8D5E8900B78C5D /* WSBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5E0F761B8D5E8900B78C5D /* WSBezier.m */; };
@@ -334,6 +335,8 @@
 		08DCA96A17AA5A7E00E3F528 /* JScrollView+PageControl+AutoScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JScrollView+PageControl+AutoScroll.m"; sourceTree = "<group>"; };
 		08F9F06318AE07E300DF5815 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
 		08F9F06418AE07E300DF5815 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
+		30770A662084E1EC00B1E6C4 /* UIButton+LCAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+LCAlignment.h"; sourceTree = "<group>"; };
+		30770A682084E1EC00B1E6C4 /* UIButton+LCAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LCAlignment.m"; sourceTree = "<group>"; };
 		6D5E0F6D1B8C531E00B78C5D /* ADRadiusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADRadiusView.m; sourceTree = "<group>"; };
 		6D5E0F6E1B8C531E00B78C5D /* ADRadiusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADRadiusView.h; sourceTree = "<group>"; };
 		6D5E0F731B8D5E8900B78C5D /* UILabel+BezierAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+BezierAnimation.h"; sourceTree = "<group>"; };
@@ -532,6 +535,8 @@
 				0865CA071946B5A800806F93 /* MBMenuView.m */,
 				0885F4A01733AA3200246C02 /* ADTools.h */,
 				0885F4A11733AA3200246C02 /* ADTools.m */,
+				30770A662084E1EC00B1E6C4 /* UIButton+LCAlignment.h */,
+				30770A682084E1EC00B1E6C4 /* UIButton+LCAlignment.m */,
 				08ABB35D1749DD5E00DC543E /* Helper.h */,
 				BE41790E1DE2F5020090F03F /* Foundation+Log.m */,
 				BE4FDC2A1DB088F300639470 /* UIApplication+Utils.h */,
@@ -1085,6 +1090,7 @@
 				08D3A8141737B74E00220430 /* NAPhoto.m in Sources */,
 				0865CA081946B5A800806F93 /* MBMenuView.m in Sources */,
 				08D3A8151737B74E00220430 /* NAPhotoBrowser.m in Sources */,
+				30770A692084E1EC00B1E6C4 /* UIButton+LCAlignment.m in Sources */,
 				0898D9FF192B00D200AF4F41 /* CheckBox.m in Sources */,
 				08AC026F192EF0D1004BA73E /* NSObject+MKBlockAdditions.m in Sources */,
 				6D5E0F781B8D5E8900B78C5D /* WSBezier.m in Sources */,
